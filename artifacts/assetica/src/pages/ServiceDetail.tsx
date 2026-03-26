@@ -23,8 +23,11 @@ const services: Record<string, {
       { step: "04", title: "Report Delivery", desc: "Clear, actionable due diligence report delivered to your timeline." },
     ],
     faqs: [
-      { q: "What does due diligence involve?", a: "Due diligence involves a comprehensive review of a target business's financial, legal, operational, and commercial aspects to identify risks and validate the basis for a transaction." },
-      { q: "How long does due diligence take?", a: "Typically 2–4 weeks depending on the complexity of the business. We offer expedited timelines for time-sensitive transactions." },
+      { q: "What does due diligence involve in a business acquisition in Dubai?", a: "Due diligence in Dubai involves a comprehensive review of the target business's financial statements, legal contracts, regulatory compliance under UAE law, operational processes, customer and supplier relationships, and potential liabilities. Assetica's due diligence process is designed to surface all material risks before any transaction is finalised." },
+      { q: "How long does a due diligence process take?", a: "Typically 2–4 weeks depending on the size and complexity of the business. For smaller SMEs in the UAE, we can often complete a focused review within 10 business days. For larger or more complex businesses with international operations, allow 4–6 weeks. We offer expedited timelines for time-sensitive transactions." },
+      { q: "What types of due diligence does Assetica conduct?", a: "Assetica conducts financial due diligence, legal due diligence, commercial due diligence, operational due diligence, tax due diligence, and technology/IP due diligence. The scope is tailored to the specific transaction type — whether it is a full acquisition, minority investment, merger, or joint venture." },
+      { q: "Can due diligence uncover hidden liabilities in a UAE business?", a: "Yes. This is one of the primary purposes of professional due diligence. Our team identifies contingent liabilities, undisclosed debts, regulatory breaches, pending litigation, tax exposures, and other risks that may not be visible from a surface-level review of the business. This protects buyers and investors from costly post-transaction surprises." },
+      { q: "Do I need due diligence if I am buying a small business in Dubai?", a: "Yes, due diligence is equally important for small business acquisitions. Even small businesses can carry significant hidden risks such as undisclosed debts, outstanding regulatory issues, or key-person dependency. Assetica offers right-sized due diligence packages for SMEs in Dubai and across the UAE that are thorough yet cost-effective." },
     ],
   },
   "business-structuring": {
@@ -39,7 +42,11 @@ const services: Record<string, {
       { step: "04", title: "Implementation Support", desc: "Guidance through the implementation of recommended structural changes." },
     ],
     faqs: [
-      { q: "Why does business structure affect valuation?", a: "Corporate structure directly impacts tax efficiency, investor attractiveness, risk allocation, and ease of investment or exit. An optimal structure can significantly enhance your business's value." },
+      { q: "Why does business structure affect company valuation?", a: "Corporate structure directly impacts tax efficiency, investor attractiveness, risk allocation, governance quality, and ease of investment or exit. An optimally structured business in the UAE typically commands a higher valuation multiple than a comparable business with a complex or inefficient structure. Assetica helps you structure for maximum value." },
+      { q: "What is the best business structure for attracting investors in the UAE?", a: "The optimal structure depends on your growth stage and investor type. For PE or VC investment, a clean holding structure with a single operating subsidiary is typically preferred. For strategic investors, a structure that facilitates partial acquisition or joint venture is important. Assetica advises on the most appropriate structure for your specific fundraising objectives." },
+      { q: "How does business structuring differ from company formation?", a: "Company formation is the administrative process of registering a legal entity. Business structuring is a strategic exercise that determines the most effective arrangement of legal entities, ownership, governance, and financial flows to achieve your commercial objectives — including optimization for valuation, taxation, and investor readiness." },
+      { q: "Can Assetica help restructure an existing business in Dubai?", a: "Yes. Assetica works with existing businesses across the UAE and UK to review and restructure their corporate arrangements. This includes group restructuring, introduction of holding companies, shareholder agreement amendments, and preparation for investment or exit — all aimed at enhancing value and simplifying investor and buyer engagement." },
+      { q: "How long does business structuring take?", a: "An initial assessment and recommendations typically take 1–2 weeks. Implementation timelines depend on the complexity of changes required and any regulatory approvals needed in the UAE. Simple restructuring can be completed in 4–6 weeks; complex international group restructuring may take 3–6 months." },
     ],
   },
   "building-pitch-deck": {
@@ -54,7 +61,11 @@ const services: Record<string, {
       { step: "04", title: "Final Delivery", desc: "Investment-ready pitch deck in your preferred format." },
     ],
     faqs: [
-      { q: "How many slides should a pitch deck have?", a: "Typically 12–15 slides covering the key investor questions. We tailor the length and depth based on your specific fundraising stage and audience." },
+      { q: "What should a pitch deck include for UAE investors?", a: "A pitch deck for UAE and Gulf investors should include a compelling executive summary, a clear problem and solution, the size of your market opportunity in the region, your business model and revenue streams, historical financial performance, 3–5 year financial projections, your competitive positioning, your team's credentials, and your funding ask with a clear use of funds. Assetica ensures every slide is both data-driven and visually compelling." },
+      { q: "How many slides should a pitch deck have?", a: "The optimal length is typically 12–15 slides. This is long enough to cover all key investor questions comprehensively but short enough to maintain engagement throughout a presentation. Assetica tailors the length and depth based on your fundraising stage — a seed-stage deck differs significantly from a Series B or pre-IPO deck." },
+      { q: "How does Assetica integrate business valuation into the pitch deck?", a: "One of the most powerful elements of any pitch deck is a credible, independently supported company valuation. Assetica uniquely combines our pitch deck development service with our financial modelling expertise to produce a defensible valuation that forms the basis of your funding ask — giving investors the confidence to commit at the valuation you are seeking." },
+      { q: "Can Assetica build a pitch deck for a UAE startup raising its first round?", a: "Absolutely. We work with founders and entrepreneurs across the UAE and MENA region at all stages — from pre-revenue startups raising their first angel round, to growth-stage businesses preparing for institutional investment. We adapt our approach, financial modelling depth, and narrative style to suit your specific stage and investor audience." },
+      { q: "How long does it take to build a pitch deck with Assetica?", a: "Our standard pitch deck development timeline is 2–3 weeks from the initial discovery session to final delivery. We include two rounds of revisions in our standard engagement. For urgent fundraising timelines, we offer expedited delivery in 7–10 business days." },
     ],
   },
   "financial-modelling": {
@@ -69,7 +80,11 @@ const services: Record<string, {
       { step: "04", title: "Valuation Report", desc: "Comprehensive report with clear valuation conclusion and supporting analysis." },
     ],
     faqs: [
-      { q: "Which valuation method does Assetica use?", a: "We apply the most appropriate methodology based on your industry and purpose — typically a combination of DCF, market comparables, and precedent transactions for cross-validation." },
+      { q: "What valuation method does Assetica use for financial modelling?", a: "We apply the most appropriate methodology — or a combination of methodologies — based on your industry, business stage, and the purpose of the valuation. For most businesses, we use a combination of Discounted Cash Flow (DCF) analysis, market comparables (EV/EBITDA, P/E multiples), and precedent transaction analysis. Using multiple methods provides cross-validation and a more defensible valuation range." },
+      { q: "What financial information is needed to build a valuation model?", a: "We typically require 3 years of audited or management financial statements (P&L, balance sheet, cash flow), current year management accounts, details of any significant one-off items or adjustments, an overview of your revenue model, and any existing forecasts or business plans. Our team will provide a specific document checklist after your initial consultation." },
+      { q: "How accurate is a financial model for business valuation in Dubai?", a: "The accuracy of a financial model depends on the quality of the underlying data and the rigor of the assumptions. Assetica's models are built on independently researched market data, verified financial inputs, and thoroughly tested assumptions. We present valuations as a range with clearly documented sensitivity analysis, so you and your stakeholders understand both the central case and the range of outcomes." },
+      { q: "Can financial modelling help with securing bank finance in the UAE?", a: "Yes. UAE banks and financial institutions require detailed financial projections and cash flow models as part of their credit assessment process. Assetica builds financial models that are specifically designed to satisfy the requirements of UAE and international lenders — demonstrating debt serviceability, liquidity, and covenant compliance under multiple scenarios." },
+      { q: "How does financial modelling support M&A decisions in the UAE?", a: "In M&A transactions, financial modelling is used to assess the value of the target business, model the impact of the acquisition on the acquirer's financials (accretion/dilution analysis), stress-test the deal under different scenarios, and structure the consideration (cash, equity, earn-out). Assetica's M&A financial models are built to the standard expected by sophisticated buyers, sellers, and their advisors." },
     ],
   },
   "buyer-seller-negotiation": {
@@ -84,7 +99,11 @@ const services: Record<string, {
       { step: "04", title: "Deal Closing", desc: "Support through to signing and completion to ensure all terms are met." },
     ],
     faqs: [
-      { q: "Does Assetica represent buyers or sellers?", a: "We can represent either buyers or sellers, or provide a neutral independent opinion. Our role is always clearly defined upfront to ensure transparency." },
+      { q: "How does Assetica support buyer and seller negotiations in Dubai?", a: "Assetica acts as an experienced, independent intermediary providing both parties with the financial and commercial analysis needed to bridge valuation gaps and structure a deal that works for everyone. We provide independent valuation opinions, scenario modelling for different deal structures, negotiation strategy advisory, and support in drafting and reviewing heads of terms and sale and purchase agreements." },
+      { q: "Does Assetica represent buyers, sellers, or both?", a: "We can represent either buyers or sellers, or provide a neutral independent opinion for both parties. Our role is always clearly defined upfront to ensure full transparency. If we are engaged by one party, we act exclusively in their interest. If engaged as a neutral advisor, we provide objective analysis to both sides to facilitate a fair and efficient deal process." },
+      { q: "What is the most common reason deals fail in the UAE and how can Assetica help?", a: "The most common reason deals fail is a valuation gap — the buyer and seller cannot agree on price. Assetica addresses this directly by providing an independent, defensible valuation that both parties can use as a credible starting point. We also help structure creative deal mechanics — such as earn-outs, deferred consideration, or equity rollovers — that can bridge valuation gaps without either party conceding their position entirely." },
+      { q: "Can Assetica help negotiate an earn-out structure for a business sale in Dubai?", a: "Yes. Earn-out structures are increasingly common in UAE business sales, particularly where there is uncertainty about future performance. Assetica helps design earn-out mechanisms that are fair, measurable, and clearly documented — including defining the earn-out metrics, calculation methodology, payment schedule, and protections for both buyer and seller during the earn-out period." },
+      { q: "How long does a business sale negotiation typically take in the UAE?", a: "From initial offer to signed SPA, UAE business sales typically take 3–6 months. The timeline depends on the complexity of the business, the number of parties involved, the extent of due diligence required, and how quickly valuation gaps can be resolved. Assetica's involvement from the outset significantly reduces unnecessary delays by ensuring valuations are credible and deal structures are commercially sound." },
     ],
   },
   "tax-valuation": {
@@ -99,7 +118,11 @@ const services: Record<string, {
       { step: "04", title: "Report & Advisory", desc: "Tax valuation report with strategic recommendations for tax optimization." },
     ],
     faqs: [
-      { q: "Is a tax valuation different from a standard business valuation?", a: "Yes. Tax valuations must meet specific regulatory standards set by tax authorities. They require additional documentation, specific methodologies, and defensibility against tax authority challenge." },
+      { q: "What is a tax valuation and why is it needed in the UAE?", a: "A tax valuation is an independently prepared assessment of the value of a business, asset, or interest for a specific tax purpose. In the UAE, following the introduction of corporate tax in 2023, tax valuations are increasingly required for transfer pricing compliance, business reorganizations, employee share schemes, and transactions between related parties. Assetica prepares tax valuations that meet the requirements of the UAE Federal Tax Authority (FTA)." },
+      { q: "Is a tax valuation different from a standard business valuation?", a: "Yes. While the underlying valuation methodology may be similar, tax valuations must meet specific regulatory standards set by the relevant tax authority. They require more extensive documentation, specific methodologies prescribed by tax regulations, and must be defensible against challenge from tax authorities. Assetica's tax valuations are prepared with this regulatory scrutiny in mind." },
+      { q: "Does Assetica prepare transfer pricing valuations for UAE businesses?", a: "Yes. Transfer pricing is one of the most significant tax compliance requirements for UAE businesses with related-party transactions, particularly following the introduction of UAE corporate tax. Assetica prepares transfer pricing valuations and documentation that comply with the OECD Transfer Pricing Guidelines and UAE FTA requirements — protecting businesses from transfer pricing adjustments and penalties." },
+      { q: "What valuations are needed for UAE employee share schemes?", a: "Employee share option plans (ESOPs) and other equity incentive arrangements require independent valuations of the company's shares at the time of grant for tax compliance purposes. Assetica provides ESOP valuations that are fully documented and defensible with the UAE FTA and other relevant tax authorities, using recognised methodologies such as the Black-Scholes model and DCF analysis." },
+      { q: "How does UAE corporate tax affect business valuation requirements?", a: "The introduction of UAE corporate tax at 9% from June 2023 has created new valuation obligations for businesses — particularly around related-party transactions, group restructurings, and the recognition of goodwill and intangible assets. Businesses that were previously not required to obtain formal valuations may now need them for tax compliance. Assetica helps businesses understand and fulfil these new valuation obligations." },
     ],
   },
   "machinery-equipment-valuation": {
@@ -114,7 +137,11 @@ const services: Record<string, {
       { step: "04", title: "Valuation Report", desc: "Comprehensive report with individual and portfolio valuations." },
     ],
     faqs: [
-      { q: "What valuation basis is used for machinery?", a: "We can value on multiple bases depending on purpose: market value, fair value, depreciated replacement cost, or orderly liquidation value. The most appropriate basis depends on the intended use of the valuation." },
+      { q: "Why would a business in Dubai need a machinery and equipment valuation?", a: "There are several common reasons: obtaining asset-backed financing from UAE banks, insurance purposes to ensure adequate coverage, buy-sell transactions where assets form part of the deal consideration, business liquidation or restructuring, financial reporting under IFRS (fair value of property, plant and equipment), estate planning, and legal disputes. Assetica prepares valuations that satisfy all of these purposes." },
+      { q: "What valuation basis does Assetica use for machinery?", a: "We value on the basis most appropriate for the intended purpose. The main bases are: Market Value (what the asset would sell for between willing parties), Depreciated Replacement Cost (the cost to replace the asset less depreciation — typically used for insurance or financial reporting), and Orderly Liquidation Value (the amount expected in a structured sale). We always clearly state the basis of valuation in our reports." },
+      { q: "Does Assetica value machinery and equipment on-site in Dubai and the UAE?", a: "Yes. Our certified appraisers conduct on-site inspections across Dubai, Abu Dhabi, Sharjah, and throughout the UAE. Physical inspection is a standard part of our machinery and equipment valuation process — we assess the condition, age, utilization, and remaining useful life of each asset to ensure our valuations accurately reflect the physical state of the equipment." },
+      { q: "Which industries does Assetica cover for machinery valuation in the UAE?", a: "Assetica covers all major industries present in the UAE including manufacturing, construction, oil and gas, logistics and transportation, healthcare and medical, food and beverage processing, hospitality, retail, agriculture, and technology. We also value specialist assets such as marine equipment, aviation assets, printing and media equipment, and energy generation assets." },
+      { q: "How does machinery and equipment valuation affect a UAE business sale?", a: "In a business sale, plant, machinery, and equipment are often among the most significant tangible assets. An independent, professionally prepared asset valuation ensures sellers achieve fair value and gives buyers confidence in the asset quality. It also informs negotiation around price adjustments, asset write-downs, and warranties. Assetica's valuations are accepted by banks, legal advisors, and regulatory authorities throughout the UAE." },
     ],
   },
   "strategic-value-advisory": {
@@ -129,7 +156,11 @@ const services: Record<string, {
       { step: "04", title: "Implementation & Review", desc: "Support through implementation with regular progress reviews." },
     ],
     faqs: [
-      { q: "How does strategic value advisory differ from standard consulting?", a: "Our strategic value advisory is specifically focused on measurable value creation, grounded in rigorous financial analysis and valuation methodology — not just strategic recommendations." },
+      { q: "What is strategic value advisory and how does it help businesses in Dubai?", a: "Strategic value advisory is a service that goes beyond telling you what your business is worth today — it helps you understand why your business is valued as it is, what factors are suppressing your value, and what specific actions you can take to increase it. For businesses in Dubai and the UAE planning to raise capital, attract investors, or pursue an exit, this service provides a clear, financially grounded roadmap to achieving a higher valuation." },
+      { q: "How does Assetica identify value gaps in a business?", a: "We start with an independent baseline valuation of your business. We then compare your financial profile, operational metrics, and growth trajectory against sector benchmarks and comparable businesses. The gap between your current valuation and your potential valuation — based on achievable improvements — defines the value creation opportunity. We then prioritize the initiatives that will have the greatest impact on value in the shortest timeframe." },
+      { q: "How does strategic value advisory differ from management consulting?", a: "Management consulting typically focuses on operational improvements and strategic planning. Strategic value advisory is specifically focused on measurable financial value creation, grounded in rigorous valuation methodology. Every recommendation we make is assessed for its likely impact on your company's valuation multiple and exit price — not just operational KPIs. This ensures your management team is focused on what actually moves the needle on value." },
+      { q: "How long before a planned exit should I engage strategic value advisory?", a: "Ideally 2–3 years before a planned sale or fundraising event. This gives sufficient time to implement value-enhancing initiatives, demonstrate their impact in your financial results, and build a credible track record that supports a higher valuation. However, even 12 months of focused value creation work with Assetica can make a significant difference to your exit outcome." },
+      { q: "Can strategic value advisory help a UAE business attract private equity investment?", a: "Yes, this is one of the most common engagements for our strategic value advisory service. Private equity investors apply rigorous financial scrutiny to potential investments. Assetica helps business owners understand how PE investors will assess their company, identify and address the issues that could depress the investment valuation, and build the commercial narrative and financial track record that supports a premium valuation." },
     ],
   },
   "business-planning": {
@@ -144,7 +175,11 @@ const services: Record<string, {
       { step: "04", title: "Review & Finalisation", desc: "Iterative review with management to ensure accuracy and completeness." },
     ],
     faqs: [
-      { q: "What is included in Assetica's business plan service?", a: "Our business planning service includes a comprehensive written plan, detailed financial model with 3–5 year projections, market analysis, competitive landscape assessment, and a management presentation." },
+      { q: "What is included in Assetica's business plan service?", a: "Our business planning service includes a comprehensive written business plan document, a detailed financial model with 3–5 year P&L, balance sheet, and cash flow projections, a market analysis section covering TAM, SAM, and SOM, competitive landscape assessment, operational and HR plan, marketing and sales strategy, risk register with mitigation strategies, and a management presentation summary. Every business plan is tailored to your specific business and audience." },
+      { q: "Why do I need a professional business plan when applying for finance in the UAE?", a: "UAE banks, development finance institutions (such as Mohammed Bin Rashid Fund and Khalifa Fund), and private investors all require a well-structured, professionally prepared business plan as part of their assessment process. A credible business plan with robust financial projections demonstrates that you understand your business, your market, and the risks involved — significantly increasing your chances of securing finance on favourable terms." },
+      { q: "Can Assetica prepare a business plan for a new business launch in Dubai?", a: "Yes. We regularly prepare business plans for entrepreneurs launching new businesses in Dubai, including businesses seeking licences from DIFC, ADGM, and other UAE free zones and mainland authorities. Our plans include the market research, financial modelling, and operational planning required to support licensing applications, visa applications, and initial fundraising." },
+      { q: "How detailed should financial projections be in a UAE business plan?", a: "For most purposes — whether bank financing, investor fundraising, or strategic planning — financial projections should cover a minimum of 3 years (typically 5 years for investor-facing plans) and include monthly projections for Year 1 and annual projections thereafter. Projections should include detailed revenue build-up by product or service line, cost structure, capital expenditure plan, working capital assumptions, and key financial ratios. Assetica builds all projections from the bottom up, with clearly documented and independently benchmarked assumptions." },
+      { q: "How is a business plan different from a pitch deck?", a: "A business plan is a comprehensive, detailed document typically 20–50 pages long, covering all aspects of your business in depth. It is used for bank applications, regulatory submissions, and internal strategic planning. A pitch deck is a concise visual presentation of typically 12–15 slides, designed for investor meetings where you need to communicate your key points quickly and compellingly. Assetica offers both services — and they work best when developed together, ensuring total consistency between your detailed plan and investor presentation." },
     ],
   },
 };
@@ -230,7 +265,7 @@ const ServiceDetail = () => {
               </div>
             </AnimatedSection>
 
-            <FaqSection faqs={svc.faqs} title={`${svc.title} FAQs`} subtitle="Common questions about this service." />
+            <FaqSection faqs={svc.faqs} title={`${svc.title} — Frequently Asked Questions`} subtitle={`Common questions about Assetica's ${svc.title.toLowerCase()} service in Dubai and globally.`} />
           </div>
 
           <div className="lg:sticky lg:top-28">
@@ -251,11 +286,20 @@ const ServiceDetail = () => {
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
                 <h3 className="font-display font-bold text-sm mb-3" style={{ color: "#012241" }}>Other Services</h3>
                 <div className="flex flex-col gap-2">
-                  {["Due Diligence","Business Structuring","Building Pitch Deck","Financial Modelling","Buyer & Seller Negotiation","Tax Valuation","Machinery & Equipment Valuation","Strategic Value Advisory","Business Planning"]
-                    .filter(n => n.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-') !== slug)
-                    .slice(0, 6)
-                    .map(n => (
-                    <Link key={n} to={`/services/${n.toLowerCase().replace(/[&\s]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}`} className="text-sm text-slate-500 hover:text-[#4BD1A0] transition-colors py-1 border-b border-slate-100 last:border-0">{n}</Link>
+                  {[
+                    { name: "Due Diligence", slug: "due-diligence" },
+                    { name: "Business Structuring", slug: "business-structuring" },
+                    { name: "Building Pitch Deck", slug: "building-pitch-deck" },
+                    { name: "Financial Modelling", slug: "financial-modelling" },
+                    { name: "Buyer & Seller Negotiation", slug: "buyer-seller-negotiation" },
+                    { name: "Tax Valuation", slug: "tax-valuation" },
+                    { name: "Machinery & Equipment Valuation", slug: "machinery-equipment-valuation" },
+                    { name: "Strategic Value Advisory", slug: "strategic-value-advisory" },
+                    { name: "Business Planning", slug: "business-planning" },
+                  ]
+                    .filter(s => s.slug !== slug)
+                    .map(s => (
+                    <Link key={s.slug} to={`/services/${s.slug}`} className="text-sm text-slate-500 hover:text-[#4BD1A0] transition-colors py-1 border-b border-slate-100 last:border-0">{s.name}</Link>
                   ))}
                 </div>
               </div>
