@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Assetica" className="h-10 w-auto" />
-          <span className="font-montserrat font-bold text-xl tracking-widest text-[#012241]">ASSETICA</span>
+          <span style={{ fontFamily: "'Bebas Neue', sans-serif", letterSpacing: "0.12em" }} className="text-2xl text-[#012241]">ASSETICA</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
