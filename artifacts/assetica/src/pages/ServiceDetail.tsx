@@ -170,28 +170,36 @@ const ServiceDetail = () => {
   const { slug } = useParams();
   const svc = slug ? services[slug] : null;
 
+  const serviceSchema = svc ? {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": svc.title,
+    "description": svc.intro,
+    "provider": { "@type": "Organization", "name": "Assetica", "url": "https://assetica.net" },
+    "areaServed": ["AE", "GB", "SA", "EU"],
+    "url": `https://assetica.net/services/${slug}`
+  } : null;
+
   if (!svc) return (
-    <>
-      {service && serviceSchema && (
-        <SEOHead
-          title={`${service.title} in Dubai & UAE | Assetica`}
-          description={`${service.intro.slice(0, 150)}...`}
-          canonical={`/services/${slug}`}
-          schema={serviceSchema}
-        />
-      )}
     <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
       <Navbar />
       <div className="pt-32 text-center">
         <h1 className="font-display font-bold text-2xl" style={{ color: "#012241" }}>Service not found</h1>
-        <Link to="/services" className="text-[#4BD1A0] mt-4 inline-block">← Back to Services</Link>
+        <Link to="/services" className="text-[#4BD1A0] mt-4 inline-block">&larr; Back to Services</Link>
       </div>
       <Footer />
     </div>
   );
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+    <>
+      <SEOHead
+        title={`${svc.title} Services in Dubai & UAE | Assetica`}
+        description={svc.intro.slice(0, 155)}
+        canonical={`/services/${slug}`}
+        schema={serviceSchema || undefined}
+      />
+      <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
       <Navbar />
       <div className="pt-[72px] px-4 md:px-8">
         <div className="relative rounded-3xl overflow-hidden" style={{ height: "clamp(280px, 45vh, 420px)" }}>
@@ -312,9 +320,6 @@ const ServiceDetail = () => {
 
       <Footer />
     </div>
-  );
-};
-
     </>
   );
 };
