@@ -22,8 +22,8 @@ export default async function handler(req) {
     }
 
     // Notify Assetica team
-    await resend.emails.send({
-      from: "Assetica Website <noreply@assetica.net>",
+    const teamEmail = await resend.emails.send({
+      from: "Assetica Website <onboarding@resend.dev>",
       to: ["info@assetica.net"],
       replyTo: email,
       subject: `New Enquiry from ${firstName} ${lastName}${service ? ` — ${service}` : ""}`,
@@ -44,7 +44,7 @@ export default async function handler(req) {
               </tr>
               ${phone ? `<tr>
                 <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #6b7280; font-size: 13px;">Phone</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #111827; font-size: 14px;"><a href="tel:${phone}" style="color: #0E9F9F;">${phone}</a></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6;"><a href="tel:${phone}" style="color: #0E9F9F;">${phone}</a></td>
               </tr>` : ""}
               ${service ? `<tr>
                 <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #6b7280; font-size: 13px;">Service</td>
@@ -57,20 +57,25 @@ export default async function handler(req) {
             </table>
             <div style="margin-top: 24px; padding: 16px; background: #f0fdf9; border-radius: 8px; border-left: 4px solid #0E9F9F;">
               <p style="margin: 0; font-size: 13px; color: #374151;">
-                💡 <strong>Tip:</strong> Hit <strong>Reply</strong> to respond directly to ${firstName} at <a href="mailto:${email}" style="color: #0E9F9F;">${email}</a>
+                💡 Hit <strong>Reply</strong> to respond directly to ${firstName} at <a href="mailto:${email}" style="color: #0E9F9F;">${email}</a>
               </p>
             </div>
-            <p style="margin-top: 24px; font-size: 12px; color: #9ca3af; text-align: center;">
-              Sent from assetica.net contact form
-            </p>
           </div>
         </div>
       `,
     });
 
-    // Auto-reply to the enquirer
+    if (teamEmail.error) {
+      console.error("Team email error:", teamEmail.error);
+      return new Response(JSON.stringify({ error: teamEmail.error.message }), {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    // Auto-reply to enquirer
     await resend.emails.send({
-      from: "Assetica <noreply@assetica.net>",
+      from: "Assetica <onboarding@resend.dev>",
       to: [email],
       subject: "We've received your enquiry — Assetica",
       html: `
@@ -97,9 +102,10 @@ export default async function handler(req) {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });
+
   } catch (error) {
     console.error("Contact form error:", error);
-    return new Response(JSON.stringify({ error: "Failed to send message" }), {
+    return new Response(JSON.stringify({ error: error.message || "Failed to send" }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
     });
