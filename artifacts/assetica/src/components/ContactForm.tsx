@@ -1,12 +1,36 @@
 import { useState } from "react";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Loader2 } from "lucide-react";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", service: "", message: "" });
+
   const focus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => { e.target.style.borderColor = "#4BD1A0"; e.target.style.boxShadow = "0 0 0 2px rgba(75,209,160,0.2)"; };
   const blur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => { e.target.style.borderColor = "#e2e8f0"; e.target.style.boxShadow = "none"; };
   const inputCls = "w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-700 bg-slate-50 focus:outline-none transition";
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or call us directly.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   if (submitted) return (
     <div className="flex flex-col items-center justify-center py-10 text-center">
@@ -19,7 +43,7 @@ const ContactForm = () => {
   );
 
   return (
-    <form onSubmit={e => { e.preventDefault(); setSubmitted(true); }} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label className="block text-xs font-semibold text-slate-600 mb-1.5">First Name *</label>
@@ -57,10 +81,24 @@ const ContactForm = () => {
         <label className="block text-xs font-semibold text-slate-600 mb-1.5">Message</label>
         <textarea rows={4} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} placeholder="Tell us about your valuation needs..." className={inputCls + " resize-none"} onFocus={focus} onBlur={blur} />
       </div>
-      <button type="submit" className="w-full py-3 rounded-full font-bold text-sm text-white transition-colors" style={{ backgroundColor: "#012241" }}
-        onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#4BD1A0")}
-        onMouseLeave={e => (e.currentTarget.style.backgroundColor = "#012241")}>
-        Submit Enquiry
+
+      {error && (
+        <p className="text-red-500 text-sm text-center">{error}</p>
+      )}
+
+      <button
+        type="submit"
+        disabled={loading}
+        className="w-full py-3 rounded-full font-bold text-sm text-white transition-colors flex items-center justify-center gap-2"
+        style={{ backgroundColor: loading ? "#4BD1A0" : "#012241" }}
+        onMouseEnter={e => { if (!loading) e.currentTarget.style.backgroundColor = "#4BD1A0"; }}
+        onMouseLeave={e => { if (!loading) e.currentTarget.style.backgroundColor = "#012241"; }}
+      >
+        {loading ? (
+          <><Loader2 className="w-4 h-4 animate-spin" /> Sending...</>
+        ) : (
+          "Submit Enquiry"
+        )}
       </button>
     </form>
   );
