@@ -6,7 +6,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import FaqSection from "@/components/FaqSection";
 import ContactForm from "@/components/ContactForm";
 
-const heroImg = "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1800&q=80";
+const heroImg = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80";
 
 const services = [
   {
@@ -20,14 +20,14 @@ const services = [
     slug: "business-structuring",
     title: "Business Structuring",
     desc: "We establish a strong valuation foundation by assessing legal, financial, and operational aspects of your business. Our experts help structure your business for optimal valuation outcomes.",
-    image: "https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
     badge: "Foundation Building",
   },
   {
     slug: "building-pitch-deck",
     title: "Building Pitch Deck",
     desc: "We craft compelling presentations that highlight your company's value proposition, financials, and growth prospects. Designed to captivate investors and stakeholders.",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=900&q=80",
     badge: "Investor Ready",
   },
   {
@@ -55,7 +55,7 @@ const services = [
     slug: "strategic-value-advisory",
     title: "Strategic Value Advisory",
     desc: "We offer insights to enhance your company's overall value and ensure long-term growth. Strategic guidance aligned with your business objectives and market opportunities.",
-    image: "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=900&q=80",
     badge: "Growth Strategy",
   },
   {

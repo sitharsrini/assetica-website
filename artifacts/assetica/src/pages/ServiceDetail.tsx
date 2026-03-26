@@ -32,7 +32,7 @@ const services: Record<string, {
   },
   "business-structuring": {
     title: "Business Structuring", subtitle: "Company Formation & Corporate Structure",
-    image: "https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=1800&q=80",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80",
     intro: "We establish a strong valuation foundation by assessing the legal, financial, and operational aspects of your business. Our business structuring service ensures your corporate structure is optimized for valuation, investment, and growth.",
     points: ["Legal entity structure optimization","Shareholder agreement review","Corporate governance assessment","Financial structure analysis","Tax-efficient structuring advice","Investment readiness preparation","Regulatory compliance review","Exit strategy alignment"],
     process: [
@@ -51,7 +51,7 @@ const services: Record<string, {
   },
   "building-pitch-deck": {
     title: "Building Pitch Deck", subtitle: "Investor-Ready Presentations",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1800&q=80",
+    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1800&q=80",
     intro: "We craft compelling presentations that highlight your company's value proposition, financials, and growth prospects. Our pitch decks are designed to captivate investors and stakeholders from the first slide.",
     points: ["Executive summary and company overview","Problem and solution narrative","Market opportunity sizing","Business model articulation","Financial performance and projections","Competitive landscape analysis","Team and credentials showcase","Funding requirements and use of funds"],
     process: [
@@ -127,7 +127,7 @@ const services: Record<string, {
   },
   "strategic-value-advisory": {
     title: "Strategic Value Advisory", subtitle: "Value Enhancement Consulting",
-    image: "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1800&q=80",
+    image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1800&q=80",
     intro: "We offer insights to enhance your company's overall value and ensure long-term growth. Our strategic value advisory service goes beyond valuation to provide a roadmap for sustainable value creation.",
     points: ["Value gap analysis","Value driver identification","Strategic growth planning","Operational efficiency optimization","Revenue enhancement strategies","Cost reduction opportunities","M&A target identification","Exit readiness assessment"],
     process: [
