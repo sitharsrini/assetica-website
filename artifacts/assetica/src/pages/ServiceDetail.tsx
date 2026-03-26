@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import FaqSection from "@/components/FaqSection";
 import ContactForm from "@/components/ContactForm";
+import SEOHead from "@/components/SEOHead";
 
 const services: Record<string, {
   title: string; subtitle: string; image: string; intro: string;
@@ -170,6 +171,15 @@ const ServiceDetail = () => {
   const svc = slug ? services[slug] : null;
 
   if (!svc) return (
+    <>
+      {service && serviceSchema && (
+        <SEOHead
+          title={`${service.title} in Dubai & UAE | Assetica`}
+          description={`${service.intro.slice(0, 150)}...`}
+          canonical={`/services/${slug}`}
+          schema={serviceSchema}
+        />
+      )}
     <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
       <Navbar />
       <div className="pt-32 text-center">
@@ -302,6 +312,10 @@ const ServiceDetail = () => {
 
       <Footer />
     </div>
+  );
+};
+
+    </>
   );
 };
 

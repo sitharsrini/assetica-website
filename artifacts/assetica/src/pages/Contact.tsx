@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
+import SEOHead from "@/components/SEOHead";
 import FaqSection from "@/components/FaqSection";
 
 const heroImg = "https://images.unsplash.com/photo-1521791055366-0d553872952f?auto=format&fit=crop&w=1800&q=80";

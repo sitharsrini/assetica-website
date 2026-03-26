@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import FaqSection from "@/components/FaqSection";
 import ContactForm from "@/components/ContactForm";
+import SEOHead from "@/components/SEOHead";
 
 const heroImg = "https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=1800&q=80";
 const teamImg = "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80";

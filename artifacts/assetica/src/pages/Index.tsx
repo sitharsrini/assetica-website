@@ -7,6 +7,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import CounterStat from "@/components/CounterStat";
 import FaqSection from "@/components/FaqSection";
 import ContactForm from "@/components/ContactForm";
+import SEOHead from "@/components/SEOHead";
 
 const heroImg = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80";
 const officeImg = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80";
@@ -59,8 +60,72 @@ const homepageFaqs = [
   },
 ];
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Assetica",
+  "url": "https://assetica.net",
+  "logo": "https://assetica.net/logo.png",
+  "description": "Independent business valuation firm in Dubai, UAE & UK offering M&A advisory, due diligence, financial modelling and strategic advisory services.",
+  "telephone": "+971521551198",
+  "email": "info@assetica.net",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dubai",
+    "addressCountry": "AE"
+  },
+  "sameAs": ["https://www.linkedin.com/company/assetica"]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Assetica",
+  "url": "https://assetica.net",
+  "telephone": "+971521551198",
+  "email": "info@assetica.net",
+  "priceRange": "£££",
+  "description": "Assetica provides independent business valuation, due diligence, financial modelling and M&A advisory services in Dubai, UAE, UK and Europe.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dubai",
+    "addressCountry": "AE"
+  },
+  "areaServed": ["AE", "GB", "SA", "KW", "BH", "QA", "OM", "EU"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Business Valuation Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Valuation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Due Diligence" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Financial Modelling" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tax Valuation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Strategic Advisory" } }
+    ]
+  }
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Assetica",
+  "url": "https://assetica.net",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://assetica.net/services?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+
 const Index = () => (
-  <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+  <>
+    <SEOHead
+      title="Business Valuation Services in Dubai, UAE & UK | Assetica"
+      description="Assetica — independent business valuation firm in Dubai & UK. Expert valuations for M&A, due diligence, tax, financial modelling and strategic advisory across UAE, GCC & Europe."
+      canonical="/"
+      schema={[organizationSchema, localBusinessSchema, webSiteSchema]}
+    />
+    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
     <Navbar />
 
     {/* Hero Card */}
@@ -390,6 +455,6 @@ const Index = () => (
 
     <Footer />
   </div>
-);
+</>;
 
 export default Index;
