@@ -6,63 +6,63 @@ import AnimatedSection from "@/components/AnimatedSection";
 import FaqSection from "@/components/FaqSection";
 import ContactForm from "@/components/ContactForm";
 
-const heroImg = "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=80";
+const heroImg = "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=1800&q=80";
 
 const services = [
   {
     slug: "due-diligence",
     title: "Due Diligence",
     desc: "Our thorough research and analysis reveal your business's strengths, weaknesses, and growth potential. We provide comprehensive due diligence reports that minimize risk and maximize investment confidence.",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
     badge: "Risk Management",
   },
   {
     slug: "business-structuring",
     title: "Business Structuring",
     desc: "We establish a strong valuation foundation by assessing legal, financial, and operational aspects of your business. Our experts help structure your business for optimal valuation outcomes.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=900&q=80",
     badge: "Foundation Building",
   },
   {
     slug: "building-pitch-deck",
     title: "Building Pitch Deck",
     desc: "We craft compelling presentations that highlight your company's value proposition, financials, and growth prospects. Designed to captivate investors and stakeholders.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80",
     badge: "Investor Ready",
   },
   {
     slug: "financial-modelling",
     title: "Financial Modelling",
     desc: "Our precise valuation uses financial metrics, market trends, and industry benchmarks to determine your company's worth. Advanced models that project future performance and guide strategy.",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=900&q=80",
     badge: "Data-Driven",
   },
   {
     slug: "buyer-seller-negotiation",
     title: "Buyer & Seller Negotiation",
     desc: "We facilitate successful negotiations during mergers, acquisitions, or sales, ensuring favorable outcomes for all parties. Expert intermediaries protecting your interests.",
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1521791055366-0d553872952f?auto=format&fit=crop&w=900&q=80",
     badge: "M&A Advisory",
   },
   {
     slug: "tax-valuation",
     title: "Tax Valuation",
     desc: "We assess tax impacts and develop optimized strategies to enhance your company's financial health. Compliant, transparent tax valuations for UAE, UK and international markets.",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
     badge: "Regulatory Compliant",
   },
   {
     slug: "strategic-value-advisory",
     title: "Strategic Value Advisory",
     desc: "We offer insights to enhance your company's overall value and ensure long-term growth. Strategic guidance aligned with your business objectives and market opportunities.",
-    image: "https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=900&q=80",
     badge: "Growth Strategy",
   },
   {
     slug: "business-planning",
     title: "Business Planning",
     desc: "Our advanced financial models project future performance and guide strategic decision-making. Comprehensive business plans that attract investment and drive sustainable growth.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?auto=format&fit=crop&w=900&q=80",
     badge: "Future-Focused",
   },
 ];

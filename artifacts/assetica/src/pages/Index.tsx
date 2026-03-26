@@ -8,12 +8,12 @@ import CounterStat from "@/components/CounterStat";
 import FaqSection from "@/components/FaqSection";
 import ContactForm from "@/components/ContactForm";
 
-const heroImg = "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1800&q=80";
-const officeImg = "https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=900&q=80";
-const meetingImg = "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80";
-const dueDiligenceImg = "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80";
-const pitchImg = "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80";
-const taxImg = "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80";
+const heroImg = "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=1800&q=80";
+const officeImg = "https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=900&q=80";
+const meetingImg = "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80";
+const dueDiligenceImg = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80";
+const pitchImg = "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80";
+const taxImg = "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80";
 const cityDubaiImg = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80";
 
 const serviceCards = [

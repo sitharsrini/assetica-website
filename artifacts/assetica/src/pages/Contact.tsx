@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
 import FaqSection from "@/components/FaqSection";
 
-const heroImg = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80";
+const heroImg = "https://images.unsplash.com/photo-1521791055366-0d553872952f?auto=format&fit=crop&w=1800&q=80";
 
 const contactFaqs = [
   {

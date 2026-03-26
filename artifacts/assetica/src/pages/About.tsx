@@ -6,9 +6,9 @@ import AnimatedSection from "@/components/AnimatedSection";
 import FaqSection from "@/components/FaqSection";
 import ContactForm from "@/components/ContactForm";
 
-const heroImg = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=80";
-const teamImg = "https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=900&q=80";
-const officeImg = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80";
+const heroImg = "https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=1800&q=80";
+const teamImg = "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80";
+const officeImg = "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?auto=format&fit=crop&w=900&q=80";
 
 const reasons = [
   { icon: Target, title: "Comprehensive Valuation Solutions", desc: "Discover Assetica's business valuation services around the world, offering independent valuations for businesses and assets. Ensure compliance and make confident decisions." },
