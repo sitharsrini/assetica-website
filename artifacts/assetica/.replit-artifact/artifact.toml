@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Assetica Valuation"
+version = "1.0.0"
+id = "artifacts/assetica"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21618
+
+[services.development]
+run = "pnpm --filter @workspace/assetica run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/assetica", "run", "build" ]
+publicDir = "artifacts/assetica/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21618"
+BASE_PATH = "/"
