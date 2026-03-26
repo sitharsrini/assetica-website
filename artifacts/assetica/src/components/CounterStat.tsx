@@ -1,49 +1,36 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useInView } from "framer-motion";
 
 interface CounterStatProps {
-  value: number;
-  suffix?: string;
-  prefix?: string;
+  end: number;
+  suffix: string;
   label: string;
+  duration?: number;
 }
 
-const CounterStat = ({ value, suffix = "", prefix = "", label }: CounterStatProps) => {
+const CounterStat = ({ end, suffix, label, duration = 2000 }: CounterStatProps) => {
   const [count, setCount] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  const hasStarted = useRef(false);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasStarted.current) {
-          hasStarted.current = true;
-          let start = 0;
-          const duration = 1800;
-          const step = value / (duration / 16);
-          const timer = setInterval(() => {
-            start += step;
-            if (start >= value) {
-              setCount(value);
-              clearInterval(timer);
-            } else {
-              setCount(Math.floor(start));
-            }
-          }, 16);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.5 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [value]);
+    if (!isInView) return;
+    let start = 0;
+    const step = end / (duration / 16);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= end) { setCount(end); clearInterval(timer); }
+      else { setCount(Math.floor(start)); }
+    }, 16);
+    return () => clearInterval(timer);
+  }, [isInView, end, duration]);
 
   return (
     <div ref={ref} className="text-center">
-      <div className="text-4xl md:text-5xl font-display font-bold text-navy mb-2">
-        {prefix}{count.toLocaleString()}{suffix}
+      <div className="font-display font-bold text-4xl md:text-5xl" style={{ color: "#012241" }}>
+        {count}<span style={{ color: "#4BD1A0" }}>{suffix}</span>
       </div>
-      <div className="text-sm text-slate-500 font-medium uppercase tracking-wider">{label}</div>
+      <p className="text-sm text-slate-400 mt-2">{label}</p>
     </div>
   );
 };

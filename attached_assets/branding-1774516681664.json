@@ -1,0 +1,154 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Arial",
+      "role": "body"
+    },
+    {
+      "family": "Helvetica",
+      "role": "body"
+    },
+    {
+      "family": "Montserrat",
+      "role": "heading"
+    },
+    {
+      "family": "Avenir",
+      "role": "body"
+    }
+  ],
+  "colors": {
+    "primary": "#012241",
+    "accent": "#4BD1A0",
+    "background": "#FFFFFF",
+    "textPrimary": "#000000",
+    "link": "#0000EE"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Arial",
+      "heading": "Montserrat"
+    },
+    "fontStacks": {
+      "heading": [
+        "Montserrat",
+        "sans-serif"
+      ],
+      "body": [
+        "Arial",
+        "Helvetica",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "Avenir",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "37px",
+      "h2": "25px",
+      "body": "14px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "3px"
+  },
+  "components": {
+    "input": {
+      "background": "#FFFFFF",
+      "textColor": "#000000",
+      "borderColor": "#000000",
+      "borderRadius": "0px",
+      "borderRadiusCorners": {
+        "topLeft": "0px",
+        "topRight": "0px",
+        "bottomRight": "0px",
+        "bottomLeft": "0px"
+      },
+      "shadow": "none"
+    },
+    "buttonPrimary": {
+      "background": "#4BD1A0",
+      "textColor": "#000000",
+      "borderRadius": "200px",
+      "borderRadiusCorners": {
+        "topLeft": "200px",
+        "topRight": "200px",
+        "bottomRight": "200px",
+        "bottomLeft": "200px"
+      },
+      "shadow": "none"
+    },
+    "buttonSecondary": {
+      "background": "#FFFFFF",
+      "textColor": "#0000EE",
+      "borderColor": "#FFFFFF",
+      "borderRadius": "30px",
+      "borderRadiusCorners": {
+        "topLeft": "30px",
+        "topRight": "30px",
+        "bottomRight": "30px",
+        "bottomLeft": "30px"
+      },
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "logo": "File saved at: attached_assets/logo.png",
+    "favicon": "File saved at: attached_assets/favicon.png",
+    "ogImage": "File saved at: attached_assets/ogImage.png",
+    "logoHref": "https://www.assetica.net",
+    "logoAlt": "Assetica text logo"
+  },
+  "__llm_logo_reasoning": {
+    "selectedIndex": 1,
+    "reasoning": "Selected #1 because it is a medium-sized logo in the header with alt text matching the brand 'Assetica'. It links to the homepage, making it the primary brand logo.",
+    "confidence": 0.95,
+    "source": "llm"
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": 4,
+      "text": "Chat",
+      "reasoning": "Button #4 has a vibrant green background (#4BD1A0), which stands out as a primary call-to-action color. The text 'Chat' suggests an immediate action, making it suitable as the primary CTA."
+    },
+    "secondary": {
+      "index": 1,
+      "text": "Contact Us",
+      "reasoning": "Button #1 has a white background (#FFFFFF) with blue text, making it a suitable secondary button. The text 'Contact Us' is a common secondary action."
+    },
+    "confidence": 0.9
+  },
+  "personality": {
+    "tone": "professional",
+    "energy": "medium",
+    "targetAudience": "business professionals"
+  },
+  "designSystem": {
+    "framework": "bootstrap",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0.9,
+    "colors": 0.95,
+    "overall": 0.925
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": 1,
+        "selectedLogoReasoning": "Selected #1 because it is a medium-sized logo in the header with alt text matching the brand 'Assetica'. It links to the homepage, making it the primary brand logo.",
+        "confidence": 0.95
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": true,
+      "llmSucceeded": true
+    }
+  }
+}

@@ -1,85 +1,90 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
-
-const posts: Record<string, { title: string; date: string; readTime: string; category: string; content: string }> = {
-  "rics-red-book-vs-ivs-which-standard": {
-    title: "RICS Red Book vs. IVS: Which Valuation Standard Applies?",
-    date: "12 March 2026",
-    readTime: "6 min read",
-    category: "Standards",
-    content: `
-      <p>When commissioning an asset valuation, clients and their advisers often encounter two major international frameworks: the RICS Red Book (formally, the RICS Valuation – Global Standards) and the International Valuation Standards (IVS) published by the International Valuation Standards Council (IVSC).</p>
-      <h2>What is the RICS Red Book?</h2>
-      <p>The RICS Red Book is mandatory for RICS-registered valuers worldwide. It sets out professional standards, ethical requirements, and procedural rules for valuation engagements. It incorporates the IVS by reference but adds additional regulatory requirements around conflicts of interest, terms of engagement, and report content.</p>
-      <h2>What is the IVS?</h2>
-      <p>The IVS is a global benchmark developed by the IVSC and is increasingly adopted by regulators, auditors, and financial institutions worldwide. It sets out definitions, bases of value (Market Value, Fair Value, etc.), and general principles — but does not carry the same mandatory enforcement mechanism as the Red Book for RICS members.</p>
-      <h2>Which applies in Singapore?</h2>
-      <p>In Singapore, both frameworks are relevant. Lenders typically require RICS Red Book-compliant valuations. Auditors applying IFRS may reference IVS. SISV members follow their own standards, which are broadly aligned with IVS. Assetica's valuers are accredited under both RICS and SISV and produce reports that satisfy both sets of requirements.</p>
-      <p>If you are unsure which standard your valuation needs to comply with, we recommend discussing your specific purpose and audience with our team before the engagement begins.</p>
-    `,
-  },
-};
+import ContactForm from "@/components/ContactForm";
+import { blogPosts } from "./Blog";
 
 const BlogPost = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const post = slug ? posts[slug] : undefined;
+  const { slug } = useParams();
+  const post = blogPosts.find(p => p.slug === slug);
 
-  if (!post) {
-    return (
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <div className="flex-1 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="font-display font-bold text-2xl text-navy mb-4">Article Not Found</h1>
-            <Link to="/blog" className="text-sm font-semibold" style={{ color: "#1a8f7a" }}>
-              ← Back to Insights
-            </Link>
-          </div>
-        </div>
-        <Footer />
+  if (!post) return (
+    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+      <Navbar />
+      <div className="pt-32 text-center">
+        <h1 className="font-display font-bold text-2xl" style={{ color: "#012241" }}>Post not found</h1>
+        <Link to="/blog" className="text-[#4BD1A0] mt-4 inline-block">← Back to Blog</Link>
       </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
       <Navbar />
-
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20" style={{ backgroundColor: "#0f2044" }}>
-        <div className="max-w-3xl mx-auto px-6">
-          <AnimatedSection>
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm mb-6 transition-colors" style={{ color: "rgba(226,232,240,0.6)" }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#22b09a")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(226,232,240,0.6)")}
-            >
-              <ArrowLeft className="w-4 h-4" /> Back to Insights
-            </Link>
-            <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full block w-fit mb-4" style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#c9a84c" }}>
-              {post.category}
-            </span>
-            <h1 className="font-display font-bold text-3xl md:text-4xl text-white mb-4 leading-tight">{post.title}</h1>
-            <div className="flex items-center gap-4 text-sm" style={{ color: "rgba(226,232,240,0.5)" }}>
-              <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> {post.date}</span>
-              <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {post.readTime}</span>
+      <div className="pt-[72px] px-4 md:px-8">
+        <div className="relative rounded-3xl overflow-hidden" style={{ height: "clamp(280px, 45vh, 420px)" }}>
+          <img src={post.image} alt={post.title} className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#012241]/45 via-[#012241]/55 to-[#012241]/80" />
+          <div className="relative h-full flex flex-col items-center justify-center text-center px-6">
+            <span className="text-xs font-semibold uppercase tracking-widest mb-3 px-3 py-1 rounded-full border" style={{ color: "#4BD1A0", borderColor: "#4BD1A0" }}>{post.category}</span>
+            <h1 className="font-display font-bold text-white text-2xl md:text-4xl max-w-3xl leading-tight">{post.title}</h1>
+            <div className="flex items-center gap-4 mt-4 text-white/60 text-xs">
+              <span className="flex items-center gap-1"><Calendar className="w-3.5 h-3.5" /> {post.date}</span>
+              <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {post.readTime}</span>
             </div>
-          </AnimatedSection>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-6">
-          <AnimatedSection>
+      <div className="max-w-4xl mx-auto px-4 md:px-8 py-16">
+        <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-[#4BD1A0] transition-colors mb-10">
+          <ArrowLeft className="w-4 h-4" /> Back to Blog
+        </Link>
+        <AnimatedSection>
+          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-slate-100">
             <div
-              className="prose prose-slate prose-lg max-w-none"
-              style={{ color: "#475569" }}
-              dangerouslySetInnerHTML={{ __html: post.content }}
+              className="prose prose-slate max-w-none"
+              style={{ fontFamily: "var(--font-body)" }}
+              dangerouslySetInnerHTML={{ __html: post.content
+                .replace(/<h2>/g, '<h2 style="font-family:\'Montserrat\',sans-serif;font-weight:700;font-size:1.25rem;color:#012241;margin-top:2rem;margin-bottom:0.75rem;">')
+                .replace(/<p>/g, '<p style="color:#64748b;line-height:1.75;margin-bottom:1rem;font-size:0.9375rem;">')
+              }}
             />
-          </AnimatedSection>
-        </div>
-      </section>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.15} className="mt-8">
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+            <div className="text-center mb-6">
+              <h2 className="font-display font-bold text-xl mb-1" style={{ color: "#012241" }}>Need a Business Valuation in Dubai?</h2>
+              <p className="text-slate-500 text-sm">Our experts are ready to help. Get a free initial consultation today.</p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link to="/contact" className="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-full font-semibold text-sm" style={{ backgroundColor: "#012241" }}>
+                Get in Touch <ArrowUpRight className="w-4 h-4" />
+              </Link>
+              <a href="tel:+971521551198" className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-2.5 rounded-full border" style={{ color: "#4BD1A0", borderColor: "#4BD1A0" }}>
+                +971 52 155 1198
+              </a>
+            </div>
+          </div>
+        </AnimatedSection>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 md:px-8 pb-20">
+        <AnimatedSection>
+          <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-slate-100">
+            <div className="text-center mb-6">
+              <h2 className="font-display font-bold text-xl mb-1" style={{ color: "#012241" }}>Contact Our Valuation Experts</h2>
+              <p className="text-slate-500 text-sm">Free initial consultation for all new enquiries.</p>
+            </div>
+            <ContactForm />
+          </div>
+        </AnimatedSection>
+      </div>
 
       <Footer />
     </div>

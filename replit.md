@@ -1,57 +1,63 @@
-# Workspace
+# Assetica — Business Valuation Website
 
 ## Overview
+Professional website for Assetica (assetica.net) — a business valuation firm headquartered in Dubai, UAE with offices in London, UK. Built with React + Vite + TypeScript + Tailwind CSS.
 
-pnpm workspace monorepo using TypeScript. Contains the Assetica Valuation website — a professional asset valuation company website for assetica.net.
+## Architecture
+- **Monorepo**: pnpm workspace
+- **Frontend**: `artifacts/assetica` — React + Vite + TypeScript + Tailwind CSS v4
+- **API**: `artifacts/api-server` — Express.js API server
+- **Design system**: Based on marine-visions design patterns with Assetica branding
 
-## Stack
-
-- **Monorepo tool**: pnpm workspaces
-- **Node.js version**: 24
-- **Package manager**: pnpm
-- **TypeScript version**: 5.9
-- **API framework**: Express 5 (api-server)
-- **Frontend**: React + Vite (artifacts/assetica)
-- **Routing**: react-router-dom (BrowserRouter)
-- **Styling**: Tailwind CSS v4 + inline styles for brand colors
-- **UI Components**: Radix UI primitives
-- **Animations**: Intersection Observer (AnimatedSection), CounterStat
-
-## Assetica Branding
-
-- **Primary color**: Navy `#0f2044`
-- **Accent color (gold)**: `#c9a84c`
-- **Secondary accent (teal)**: `#1a8f7a`
-- **Fonts**: Georgia (headings), Inter (body)
-
-## Structure
-
-```text
-artifacts-monorepo/
-├── artifacts/
-│   ├── assetica/              # Assetica Valuation website (React+Vite, previewPath: /)
-│   │   └── src/
-│   │       ├── App.tsx         # BrowserRouter routes
-│   │       ├── index.css       # Tailwind + brand CSS variables
-│   │       ├── components/     # Navbar, Footer, AnimatedSection, CounterStat, ServiceCard, ContactForm, FaqSection
-│   │       └── pages/          # Index, About, Services, ServiceDetail, Industries, Contact, Blog, BlogPost, PrivacyPolicy, NotFound
-│   └── api-server/            # Express API server
-├── lib/                       # Shared libraries (api-spec, api-client-react, api-zod, db)
-└── scripts/                   # Utility scripts
-```
+## Branding
+- **Navy**: `#012241`
+- **Mint/Accent**: `#4BD1A0`
+- **Background**: `#f4f6f9`
+- **Headings font**: Montserrat (Google Fonts)
+- **Body font**: Inter (Google Fonts)
+- **Logo**: `/src/assets/logo.png`
+- **Favicon**: `/src/assets/favicon.png`
 
 ## Pages
-
-- `/` — Home (hero, stats, services grid, why choose us, industries, FAQ, contact form)
-- `/about` — About page (mission, team profiles)
-- `/services` — Services overview (10 service cards + process steps)
-- `/services/:slug` — Individual service detail pages (10 services with key points + methodology)
-- `/industries` — Industries served (Banking, Real Estate, Marine, Manufacturing, Legal, Government)
-- `/contact` — Contact page with email form
-- `/blog` — Blog/insights listing (6 articles)
-- `/blog/:slug` — Individual blog post
+- `/` — Homepage with hero, bento grid, stats, why choose us, services preview
+- `/about` — About page with story, mission, team, why choose us
+- `/services` — All 9 services in card grid
+- `/services/:slug` — Individual service detail pages with FAQs and contact forms
+- `/blog` — Blog listing with 6 real posts from assetica.net
+- `/blog/:slug` — Individual blog post pages
+- `/contact` — Contact page with form and office info
 - `/privacy-policy` — Privacy policy
 
-## Services
+## Services (9 total)
+- Due Diligence (`/services/due-diligence`)
+- Business Structuring (`/services/business-structuring`)
+- Building Pitch Deck (`/services/building-pitch-deck`)
+- Financial Modelling (`/services/financial-modelling`)
+- Buyer & Seller Negotiation (`/services/buyer-seller-negotiation`)
+- Tax Valuation (`/services/tax-valuation`)
+- Machinery & Equipment Valuation (`/services/machinery-equipment-valuation`)
+- Strategic Value Advisory (`/services/strategic-value-advisory`)
+- Business Planning (`/services/business-planning`)
 
-Property Valuation, Plant & Machinery, Business Valuation, Marine Asset Valuation, Infrastructure Valuation, Financial Reporting, Litigation Support, Insurance Valuation, ESG Asset Assessment, Feasibility Studies
+## Key Components
+- `Navbar` — Fixed with logo, nav links, phone number, CTA button
+- `Footer` — All 9 services, quick links, contact info, social links
+- `ContactForm` — firstName, lastName, email, phone, service dropdown, message
+- `FaqSection` — Accordion FAQ with mint green accents
+- `AnimatedSection` — framer-motion whileInView animations
+- `CounterStat` — Animated number counter
+
+## Contact Info
+- Phone: +971 52 155 1198
+- Email: info@assetica.net
+- Locations: Dubai, UAE & London, UK
+
+## SEO
+- Full meta tags in `index.html`: title, description, keywords, OG, Twitter
+- Geo-targeted: Dubai, UAE, UK
+- FAQ sections on every page (structured for AI/search)
+- Keyword-rich headings throughout all pages
+
+## Running
+- Frontend: `pnpm --filter @workspace/assetica run dev`
+- API: `pnpm --filter @workspace/api-server run dev`

@@ -1,289 +1,396 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Building2, Cog, BarChart3, Ship, Network, FileText, Scale, Shield, Leaf, TrendingUp } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowUpRight, CheckCircle, ChevronRight, Star, Users, Award, TrendingUp } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import CounterStat from "@/components/CounterStat";
-import ServiceCard from "@/components/ServiceCard";
 import FaqSection from "@/components/FaqSection";
 import ContactForm from "@/components/ContactForm";
 
-const services = [
+const heroImg = "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1800&q=80";
+const officeImg = "https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=900&q=80";
+const meetingImg = "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80";
+const dueDiligenceImg = "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80";
+const pitchImg = "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80";
+const machineryImg = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80";
+const taxImg = "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80";
+const cityDubaiImg = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80";
+
+const serviceCards = [
+  { title: "Due Diligence", desc: "Thorough research and analysis revealing your business's strengths, weaknesses, and growth potential.", image: dueDiligenceImg, slug: "due-diligence" },
+  { title: "Financial Modelling", desc: "Precise valuations using financial metrics, market trends, and industry benchmarks.", image: taxImg, slug: "financial-modelling" },
+  { title: "Building Pitch Deck", desc: "Compelling presentations highlighting your company's value proposition and growth prospects.", image: pitchImg, slug: "building-pitch-deck" },
+  { title: "Machinery & Equipment Valuation", desc: "Expert valuation of machinery and equipment for virtually every industry.", image: machineryImg, slug: "machinery-equipment-valuation" },
+];
+
+const whyChoose = [
+  { icon: CheckCircle, title: "Comprehensive Valuation Services", desc: "End-to-end business valuation services covering every aspect of your company's financial landscape." },
+  { icon: Users, title: "Expertise Across Industries", desc: "Our seasoned professionals bring decades of cross-industry experience to deliver accurate valuations." },
+  { icon: TrendingUp, title: "Advanced Analytical Tools", desc: "We leverage cutting-edge financial modelling and data analytics for precise valuations." },
+  { icon: Award, title: "Regulatory Compliance", desc: "All valuations are conducted in full compliance with UAE, UK and international standards." },
+  { icon: Star, title: "Personalized Consultation", desc: "Every client receives a dedicated valuation specialist and tailored service approach." },
+  { icon: CheckCircle, title: "Timely & Transparent Reporting", desc: "Clear, actionable reports delivered on time — so you can make decisions with confidence." },
+];
+
+const homepageFaqs = [
   {
-    title: "Property Valuation",
-    description: "Independent market valuations for residential, commercial, industrial, and mixed-use properties across Southeast Asia.",
-    slug: "property-valuation",
-    icon: Building2,
+    q: "What business valuation services does Assetica offer in Dubai?",
+    a: "Assetica offers a comprehensive range of business valuation services in Dubai including due diligence, business structuring, pitch deck development, financial modelling, buyer and seller negotiation, tax valuation, machinery and equipment valuation, strategic value advisory, and business planning. We serve clients across the UAE, UK, and globally.",
   },
   {
-    title: "Plant & Machinery",
-    description: "Comprehensive valuations of manufacturing equipment, industrial machinery, and specialised technical assets.",
-    slug: "plant-machinery",
-    icon: Cog,
+    q: "Why should I choose Assetica for business valuation in Dubai?",
+    a: "Assetica brings over 30 years of combined experience at the highest level of business valuation. Our team of seasoned professionals provides precise valuations that reflect the true potential of your business. We are dedicated to securing the optimal price or valuation through a client-focused, transparent approach.",
   },
   {
-    title: "Business Valuation",
-    description: "Enterprise and equity valuations for mergers, acquisitions, restructuring, and financial reporting purposes.",
-    slug: "business-valuation",
-    icon: BarChart3,
+    q: "How does Assetica conduct a business valuation?",
+    a: "Our business valuation process involves a comprehensive approach — analyzing your financial statements, historical performance data, industry trends, current market conditions, competitive landscape, and other key factors to deliver a thorough and accurate assessment of your company's worth.",
   },
   {
-    title: "Marine Asset Valuation",
-    description: "Expert appraisals of vessels, offshore platforms, port facilities, and all categories of marine and offshore assets.",
-    slug: "marine-asset-valuation",
-    icon: Ship,
+    q: "What industries does Assetica cover for valuation services?",
+    a: "Assetica serves clients across all major industries including technology, manufacturing, real estate, financial services, retail, healthcare, logistics, and professional services. Our cross-industry expertise ensures accurate, market-relevant valuations regardless of your sector.",
   },
   {
-    title: "Infrastructure Valuation",
-    description: "Valuations for energy, utilities, transport, and public infrastructure assets for government and private clients.",
-    slug: "infrastructure-valuation",
-    icon: Network,
+    q: "Does Assetica provide valuations for mergers and acquisitions?",
+    a: "Yes. Our buyer and seller negotiation service and financial modelling expertise make Assetica an ideal partner for M&A transactions. We facilitate successful negotiations during mergers, acquisitions, or sales, ensuring favorable outcomes for all parties.",
   },
   {
-    title: "Financial Reporting",
-    description: "IFRS and SFRS-compliant valuations for purchase price allocation, impairment testing, and fair value disclosures.",
-    slug: "financial-reporting",
-    icon: FileText,
+    q: "How do I get started with Assetica's valuation services?",
+    a: "Getting started is simple — contact us via phone at +971 52 155 1198, email info@assetica.net, or fill in our contact form. We offer free initial consultations and most quote requests receive a response within one business day.",
   },
 ];
 
-const faqs = [
-  {
-    question: "What qualifications do your valuers hold?",
-    answer: "All Assetica valuers are accredited members of recognised professional bodies including the Royal Institution of Chartered Surveyors (RICS), the Singapore Institute of Surveyors and Valuers (SISV), and the American Society of Appraisers (ASA). Our team has deep sector expertise across property, plant & machinery, marine, and business assets.",
-  },
-  {
-    question: "How long does a valuation take?",
-    answer: "Turnaround times vary by asset type and complexity. Simple property valuations typically take 3–5 business days. Business valuations and complex plant & machinery assessments may require 2–4 weeks. We can accommodate urgent timelines — please discuss your requirements with our team.",
-  },
-  {
-    question: "What is your valuation used for?",
-    answer: "Our reports are commonly used for financial reporting (IFRS/SFRS), mergers and acquisitions, bank financing and loan security, insurance placement, tax compliance, litigation support, estate planning, and investment decision-making.",
-  },
-  {
-    question: "Do you work outside Singapore?",
-    answer: "Yes. Assetica has a regional network covering Singapore, Malaysia, Indonesia, Thailand, Vietnam, and the Philippines. We also coordinate international valuations through our global affiliate network for clients with cross-border assets.",
-  },
-  {
-    question: "How much does a valuation cost?",
-    answer: "Fees depend on the asset type, volume, complexity, and required turnaround. We provide competitive, transparent fee proposals after an initial consultation at no charge. Contact us to discuss your requirements.",
-  },
-];
+const Index = () => (
+  <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+    <Navbar />
 
-const Index = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-
-      {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden" style={{ backgroundColor: "#0f2044" }}>
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: "radial-gradient(circle at 60% 40%, #1a8f7a 0%, transparent 60%), radial-gradient(circle at 20% 80%, #c9a84c 0%, transparent 50%)",
-          }}
+    {/* Hero Card */}
+    <div className="pt-[72px] px-4 md:px-8">
+      <div className="relative rounded-3xl overflow-hidden" style={{ height: "clamp(440px, 75vh, 700px)" }}>
+        <img
+          src={heroImg}
+          alt="Expert Business Valuation Services in Dubai"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         />
-        <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="max-w-3xl">
-            <AnimatedSection>
-              <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-6 text-xs font-semibold uppercase tracking-widest border" style={{ borderColor: "rgba(201,168,76,0.4)", color: "#c9a84c", backgroundColor: "rgba(201,168,76,0.08)" }}>
-                Accredited · Independent · Trusted
-              </div>
-              <h1 className="font-display font-bold text-4xl md:text-6xl text-white leading-tight mb-6">
-                Independent Asset<br />
-                <span style={{ color: "#c9a84c" }}>Valuation</span> You Can<br />
-                Rely On
-              </h1>
-              <p className="text-lg md:text-xl leading-relaxed mb-10" style={{ color: "rgba(226,232,240,0.75)" }}>
-                Assetica delivers credible, defensible valuations for property, plant & machinery, marine assets, businesses, and infrastructure — trusted by banks, corporates, and legal professionals across Southeast Asia.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-bold transition-all shadow-lg"
-                  style={{ backgroundColor: "#c9a84c", color: "#0f2044" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#e8c96e")}
-                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#c9a84c")}
-                >
-                  Request a Free Consultation <ArrowUpRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold border transition-all"
-                  style={{ borderColor: "rgba(226,232,240,0.3)", color: "white" }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(201,168,76,0.6)"; (e.currentTarget as HTMLAnchorElement).style.color = "#c9a84c"; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(226,232,240,0.3)"; (e.currentTarget as HTMLAnchorElement).style.color = "white"; }}
-                >
-                  Our Services
-                </Link>
-              </div>
-            </AnimatedSection>
-          </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#012241]/60 via-[#012241]/65 to-[#012241]/80" />
+
+        <div className="relative h-full flex flex-col items-center justify-center text-center px-6 pb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 rounded-full px-4 py-1.5 mb-6 text-white/90 text-xs font-medium tracking-wide"
+          >
+            Leaders in Business Valuation — UAE &amp; UK
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
+            className="font-display font-bold text-white text-3xl md:text-5xl lg:text-6xl max-w-4xl leading-tight mb-5"
+          >
+            Expert{" "}
+            <span style={{ color: "#4BD1A0" }}>Business Valuation</span>{" "}
+            Services in Dubai &amp; Global
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-white/80 text-base md:text-lg max-w-2xl leading-relaxed mb-8"
+          >
+            Reliable, accurate business valuation services trusted by companies across the UAE, UK, and globally. From due diligence to financial modelling — Assetica delivers comprehensive valuations that drive confident decisions.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.65 }}
+            className="flex flex-wrap justify-center gap-3"
+          >
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-[#4BD1A0] text-[#012241] px-8 py-3.5 rounded-full font-bold text-sm hover:bg-white transition-colors shadow-lg"
+            >
+              Get in Touch <ArrowUpRight className="w-4 h-4" />
+            </Link>
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 text-white px-8 py-3.5 rounded-full font-semibold text-sm hover:bg-white/25 transition-colors"
+            >
+              Explore Services
+            </Link>
+          </motion.div>
         </div>
-      </section>
 
-      {/* Stats */}
-      <section className="py-16 bg-white border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-            <CounterStat value={20} suffix="+" label="Years of Experience" />
-            <CounterStat value={5000} suffix="+" label="Assets Valued" />
-            <CounterStat value={12} suffix="+" label="Countries Served" />
-            <CounterStat value={98} suffix="%" label="Client Satisfaction" />
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection>
-            <div className="text-center mb-14">
-              <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#1a8f7a" }}>What We Do</p>
-              <h2 className="font-display font-bold text-3xl md:text-4xl text-navy mb-4">
-                End-to-End Valuation Services
-              </h2>
-              <p className="text-slate-500 max-w-2xl mx-auto">
-                From a single asset to a complex portfolio, Assetica has the expertise and methodology to deliver credible valuations that stand up to scrutiny.
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, i) => (
-              <AnimatedSection key={service.slug} delay={i * 80}>
-                <ServiceCard {...service} />
-              </AnimatedSection>
+        <div className="absolute bottom-5 left-6 flex items-center gap-3">
+          <div className="flex -space-x-2">
+            {[officeImg, meetingImg].map((src, i) => (
+              <img key={i} src={src} alt="" className="w-8 h-8 rounded-full object-cover border-2 border-white" />
             ))}
           </div>
+          <span className="text-white/70 text-xs">30+ years combined experience</span>
+        </div>
+      </div>
+    </div>
 
-          <AnimatedSection>
-            <div className="text-center mt-10">
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 text-sm font-semibold transition-colors"
-                style={{ color: "#1a8f7a" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#0f2044")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#1a8f7a")}
-              >
-                View All Services <ArrowUpRight className="w-4 h-4" />
-              </Link>
+    {/* About Intro Row */}
+    <AnimatedSection>
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20 grid md:grid-cols-[220px_1fr] gap-8 md:gap-16 items-start">
+        <div>
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">About Assetica</p>
+          <div className="w-8 h-0.5 bg-[#4BD1A0]" />
+        </div>
+        <div>
+          <p className="text-slate-800 text-xl md:text-2xl leading-relaxed font-medium max-w-3xl">
+            Assetica is a leader in the <span style={{ color: "#4BD1A0" }} className="font-semibold">UAE and UK</span> for comprehensive and professional company valuations. With over 30 years of expertise and a proven track record, we provide detailed valuation reports that help you make informed decisions about your business.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {["UAE & UK Headquarters", "30+ Years Experience", "Global Coverage", "All Industries Covered"].map((item) => (
+              <span key={item} className="inline-flex items-center gap-2 bg-white border border-slate-200 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">
+                <CheckCircle className="w-3.5 h-3.5 shrink-0" style={{ color: "#4BD1A0" }} /> {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </AnimatedSection>
+
+    {/* Bento Grid */}
+    <div className="max-w-7xl mx-auto px-4 md:px-8 pb-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+        <AnimatedSection delay={0} className="md:col-span-1">
+          <div className="rounded-2xl p-8 h-full min-h-[280px] flex flex-col justify-between" style={{ backgroundColor: "#012241" }}>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#4BD1A0" }}>Business Valuation</p>
+              <h3 className="text-white font-display font-bold text-xl leading-snug">
+                Independent valuations for businesses and assets — ensuring compliance and confident decisions.
+              </h3>
+            </div>
+            <div className="mt-8 flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "#4BD1A0" }} />
+              <span className="text-white/50 text-xs">UAE, UK &amp; Global Coverage</span>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.1} className="md:col-span-1">
+          <div className="relative rounded-2xl overflow-hidden min-h-[280px]">
+            <img src={cityDubaiImg} alt="Dubai business district" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#012241]/50 via-black/10 to-transparent" />
+            <div className="absolute top-4 left-4">
+              <span className="bg-white/15 backdrop-blur-md border border-white/25 text-white text-xs font-semibold px-3 py-1.5 rounded-full">Dubai &amp; Global</span>
+            </div>
+            <div className="absolute bottom-3 left-3 right-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
+              <p className="text-white font-semibold text-sm">Business Valuation in Dubai</p>
+              <p className="text-white/70 text-xs mt-0.5">UAE, UK &amp; international markets</p>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.2} className="md:col-span-1">
+          <div className="bg-white rounded-2xl p-8 h-full min-h-[280px] flex flex-col justify-between shadow-sm border border-slate-100">
+            <div>
+              <p className="font-display font-bold text-5xl" style={{ color: "#012241" }}>30<span style={{ color: "#4BD1A0" }}>+</span></p>
+              <p className="text-slate-500 text-sm mt-1">Years of Combined Experience</p>
+            </div>
+            <div className="space-y-3 mt-6">
+              {[
+                { label: "Business Valuation", value: 85 },
+                { label: "Financial Modelling", value: 75 },
+                { label: "Machinery & Equipment", value: 65 },
+              ].map(({ label, value }) => (
+                <div key={label}>
+                  <div className="flex justify-between text-xs text-slate-500 mb-1">
+                    <span>{label}</span><span>{value}%</span>
+                  </div>
+                  <div className="w-full bg-slate-100 rounded-full h-1.5">
+                    <div className="h-1.5 rounded-full" style={{ width: `${value}%`, backgroundColor: "#4BD1A0" }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+      </div>
+    </div>
+
+    {/* Stats Strip */}
+    <AnimatedSection>
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-16">
+        <p className="text-center text-sm text-slate-400 font-medium mb-10 uppercase tracking-widest">Trusted by businesses worldwide</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+          <div className="text-center"><CounterStat end={30} suffix="+" label="Years Experience" /></div>
+          <div className="text-center"><CounterStat end={500} suffix="+" label="Valuations Completed" /></div>
+          <div className="text-center"><CounterStat end={9} suffix="" label="Core Service Lines" /></div>
+          <div className="text-center"><CounterStat end={15} suffix="+" label="Countries Served" /></div>
+        </div>
+      </div>
+    </AnimatedSection>
+
+    {/* Why Choose Us */}
+    <div className="max-w-7xl mx-auto px-4 md:px-8 pb-16">
+      <AnimatedSection className="text-center mb-12">
+        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Why Choose Assetica</p>
+        <h2 className="font-display font-bold text-2xl md:text-4xl mb-3" style={{ color: "#012241" }}>
+          Why Choose Business{" "}
+          <span style={{ color: "#4BD1A0" }}>Valuation Services</span>{" "}
+          in Dubai?
+        </h2>
+        <p className="text-slate-500 text-base max-w-xl mx-auto">From initial consultations to comprehensive valuations, we ensure precision, clarity, and actionable insights.</p>
+      </AnimatedSection>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {whyChoose.map((item, i) => (
+          <AnimatedSection key={item.title} delay={i * 0.07}>
+            <div className="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-md hover:border-[#4BD1A0]/30 transition-all duration-300 h-full">
+              <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style={{ backgroundColor: "rgba(75,209,160,0.12)" }}>
+                <item.icon className="w-5 h-5" style={{ color: "#4BD1A0" }} />
+              </div>
+              <h3 className="font-display font-semibold text-base mb-2" style={{ color: "#012241" }}>{item.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
 
-      {/* Why Assetica */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <AnimatedSection>
-              <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#1a8f7a" }}>Why Choose Us</p>
-              <h2 className="font-display font-bold text-3xl md:text-4xl text-navy mb-6 leading-tight">
-                Credibility. Rigour. Independence.
-              </h2>
-              <p className="text-slate-500 leading-relaxed mb-8">
-                In valuation, the quality of the opinion is everything. Assetica combines deep sector expertise with robust methodology and absolute independence — giving clients and their stakeholders confidence in every report we issue.
-              </p>
-              <div className="flex flex-col gap-6">
-                {[
-                  { icon: Shield, title: "Fully Accredited", desc: "RICS, SISV, and ASA-credentialed valuers across all asset classes." },
-                  { icon: Scale, title: "Legally Defensible", desc: "Reports accepted by courts, regulators, auditors, and financial institutions." },
-                  { icon: TrendingUp, title: "Market Intelligence", desc: "Deep regional market data and sector benchmarks for rigorous, current opinions." },
-                  { icon: Leaf, title: "ESG-Aware", desc: "Sustainability considerations integrated into valuations where material." },
-                ].map(({ icon: Icon, title, desc }) => (
-                  <div key={title} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 mt-0.5" style={{ backgroundColor: "rgba(26,143,122,0.1)" }}>
-                      <Icon className="w-5 h-5" style={{ color: "#1a8f7a" }} />
-                    </div>
+    {/* Services Section */}
+    <div className="max-w-7xl mx-auto px-4 md:px-8 pb-20">
+      <div className="grid md:grid-cols-[280px_1fr] gap-10 items-start">
+        <AnimatedSection direction="left" className="md:sticky md:top-28">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Our Services</p>
+          <h2 className="font-display font-bold text-2xl md:text-3xl leading-snug mb-4" style={{ color: "#012241" }}>
+            Professional Business Valuation Services in Dubai
+          </h2>
+          <p className="text-slate-500 text-sm leading-relaxed mb-6">
+            Explore our specialized business valuation services designed to empower your financial decisions — from initial consultations to comprehensive valuations.
+          </p>
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-2 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-colors"
+            style={{ backgroundColor: "#012241" }}
+          >
+            View All Services <ArrowUpRight className="w-4 h-4" />
+          </Link>
+        </AnimatedSection>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {serviceCards.map((svc, i) => (
+            <AnimatedSection key={svc.slug} delay={i * 0.08}>
+              <Link
+                to={`/services/${svc.slug}`}
+                className="group relative rounded-2xl overflow-hidden block"
+                style={{ height: 240 }}
+              >
+                <img src={svc.image} alt={svc.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#012241]/70 via-black/15 to-transparent" />
+                <div className="absolute bottom-3 left-3 right-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 group-hover:bg-white/15 transition-colors duration-300">
+                  <div className="flex items-start justify-between gap-2">
                     <div>
-                      <h4 className="font-semibold text-navy mb-1">{title}</h4>
-                      <p className="text-sm text-slate-500">{desc}</p>
+                      <p className="text-white font-semibold text-sm">{svc.title}</p>
+                      <p className="text-white/70 text-xs mt-0.5 leading-relaxed">{svc.desc}</p>
                     </div>
+                    <div className="shrink-0 bg-white/20 backdrop-blur-sm rounded-full p-1.5 group-hover:bg-[#4BD1A0]/80 transition-colors duration-300">
+                      <ArrowUpRight className="w-3.5 h-3.5 text-white" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* About / CTA Banner */}
+    <div className="px-4 md:px-8 pb-8">
+      <AnimatedSection>
+        <div className="relative rounded-2xl overflow-hidden" style={{ backgroundColor: "#012241" }}>
+          <img src={meetingImg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none" />
+          <div className="relative grid md:grid-cols-2 gap-10 items-center px-8 md:px-16 py-14">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#4BD1A0" }}>Get to Know Us</p>
+              <h2 className="font-display font-bold text-white text-2xl md:text-3xl leading-snug mb-4">
+                Your Trusted Business Valuator in Dubai
+              </h2>
+              <p className="text-white/65 text-sm leading-relaxed">
+                At Assetica, we excel in delivering top-tier valuation services through our unparalleled expertise, extensive experience, and client-focused approach. With over 30 years of experience at the highest level, our team provides precise valuations that reflect the true potential of your business.
+              </p>
+            </div>
+            <div className="flex flex-col gap-4 md:items-end">
+              <div className="grid grid-cols-2 gap-3 w-full md:w-auto">
+                {[
+                  { val: "30+", label: "Years experience" },
+                  { val: "500+", label: "Valuations done" },
+                  { val: "UAE & UK", label: "Headquarters" },
+                  { val: "Global", label: "Client coverage" },
+                ].map(({ val, label }) => (
+                  <div key={label} className="bg-white/10 rounded-xl px-4 py-3">
+                    <p className="font-display font-bold text-white text-lg">{val}</p>
+                    <p className="text-white/50 text-xs mt-0.5">{label}</p>
                   </div>
                 ))}
               </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={200}>
-              <div className="rounded-2xl overflow-hidden" style={{ backgroundColor: "#0f2044", padding: "2px" }}>
-                <div className="rounded-2xl p-10" style={{ background: "linear-gradient(135deg, #0f2044 0%, #1a3060 100%)" }}>
-                  <div className="grid grid-cols-2 gap-6">
-                    {[
-                      { label: "RICS Registered", value: "Firm" },
-                      { label: "SISV Corporate", value: "Member" },
-                      { label: "ISO 9001", value: "Certified" },
-                      { label: "MAS Approved", value: "Valuer" },
-                    ].map(({ label, value }) => (
-                      <div key={label} className="text-center p-5 rounded-xl" style={{ backgroundColor: "rgba(255,255,255,0.05)" }}>
-                        <div className="font-display font-bold text-2xl mb-1" style={{ color: "#c9a84c" }}>{value}</div>
-                        <div className="text-xs text-slate-400 uppercase tracking-wider">{label}</div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-8 p-5 rounded-xl" style={{ backgroundColor: "rgba(26,143,122,0.15)", borderLeft: "3px solid #1a8f7a" }}>
-                    <p className="text-sm text-slate-300 leading-relaxed italic">
-                      "Assetica provided a thorough and defensible valuation that was accepted without challenge by our auditors and lenders. Their team's technical expertise is exceptional."
-                    </p>
-                    <p className="text-xs mt-3 font-semibold" style={{ color: "#1a8f7a" }}>— CFO, Singapore-listed REIT</p>
-                  </div>
-                </div>
-              </div>
-            </AnimatedSection>
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 text-[#012241] px-5 py-2.5 rounded-full text-sm font-bold transition-colors mt-2"
+                style={{ backgroundColor: "#4BD1A0" }}
+              >
+                Learn More <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
+    </div>
 
-      {/* Industries */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection>
-            <div className="text-center mb-14">
-              <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#1a8f7a" }}>Industries</p>
-              <h2 className="font-display font-bold text-3xl md:text-4xl text-navy">Who We Serve</h2>
+    {/* Dubai Image Strip */}
+    <div className="px-4 md:px-8 pb-8">
+      <AnimatedSection>
+        <div className="relative rounded-2xl overflow-hidden h-48 md:h-56">
+          <img src={cityDubaiImg} alt="Dubai skyline — business valuation hub" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[#012241]/55" />
+          <div className="absolute inset-0 flex items-center justify-center text-center px-6">
+            <div>
+              <p className="text-white/75 text-sm mb-2">Serving Businesses Across Dubai, UAE &amp; Globally</p>
+              <h3 className="font-display font-bold text-white text-xl md:text-2xl">
+                Unlock the Potential of Your Business
+              </h3>
             </div>
-          </AnimatedSection>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {[
-              "Banking & Finance",
-              "Real Estate",
-              "Shipping & Marine",
-              "Manufacturing",
-              "Legal & Insolvency",
-              "Government & Public",
-            ].map((industry, i) => (
-              <AnimatedSection key={industry} delay={i * 60}>
-                <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl border border-slate-100 hover:border-[#1a8f7a]/30 hover:shadow-md transition-all">
-                  <p className="text-sm font-semibold text-navy">{industry}</p>
-                </div>
-              </AnimatedSection>
-            ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
+    </div>
 
-      {/* FAQ */}
-      <FaqSection faqs={faqs} />
+    <FaqSection
+      faqs={homepageFaqs}
+      title="Frequently Asked Questions"
+      subtitle="Everything you need to know about Assetica's business valuation services in Dubai and globally."
+    />
 
-      {/* Contact CTA */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection>
-            <div className="text-center mb-14">
-              <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#1a8f7a" }}>Contact Us</p>
-              <h2 className="font-display font-bold text-3xl md:text-4xl text-navy mb-4">Start Your Valuation Today</h2>
-              <p className="text-slate-500 max-w-xl mx-auto">
-                Tell us about your asset and we'll provide a tailored proposal — with no obligation.
-              </p>
-            </div>
-          </AnimatedSection>
+    {/* Inline Contact Form */}
+    <div className="max-w-4xl mx-auto px-4 md:px-8 pb-20">
+      <AnimatedSection>
+        <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-slate-100">
+          <div className="text-center mb-8">
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Get Started</p>
+            <h2 className="font-display font-bold text-2xl md:text-3xl mb-2" style={{ color: "#012241" }}>
+              Unlock the Potential of Your Business
+            </h2>
+            <p className="text-slate-500 text-sm max-w-md mx-auto">
+              Please take a moment to fill out the form and one of our valuation experts will get back to you shortly.
+            </p>
+          </div>
           <ContactForm />
         </div>
-      </section>
-
-      <Footer />
+      </AnimatedSection>
     </div>
-  );
-};
+
+    <Footer />
+  </div>
+);
 
 export default Index;
