@@ -9,18 +9,18 @@ import FaqSection from "@/components/FaqSection";
 import ContactForm from "@/components/ContactForm";
 
 const heroImg = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80";
-const officeImg = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80";
+const officeImg = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80";
 const meetingImg = "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=900&q=80";
-const dueDiligenceImg = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80";
-const pitchImg = "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=900&q=80";
-const taxImg = "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80";
+const dueDiligenceImg = "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80";
+const pitchImg = "https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=900&q=80";
+const taxImg = "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=80";
 const cityDubaiImg = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80";
 
 const serviceCards = [
-  { title: "Due Diligence", desc: "Thorough research and analysis revealing your business's strengths, weaknesses, and growth potential.", image: dueDiligenceImg, slug: "due-diligence" },
-  { title: "Financial Modelling", desc: "Precise valuations using financial metrics, market trends, and industry benchmarks.", image: taxImg, slug: "financial-modelling" },
-  { title: "Building Pitch Deck", desc: "Compelling presentations highlighting your company's value proposition and growth prospects.", image: pitchImg, slug: "building-pitch-deck" },
-  { title: "Strategic Value Advisory", desc: "Insights to enhance your company's overall value and ensure long-term sustainable growth.", image: officeImg, slug: "strategic-value-advisory" },
+  { title: "Due Diligence", desc: "In-depth analysis that minimises risk and maximises investment confidence.", image: dueDiligenceImg, slug: "due-diligence" },
+  { title: "Financial Modelling", desc: "Precise valuations using financial metrics, market data, and industry benchmarks.", image: taxImg, slug: "financial-modelling" },
+  { title: "Building Pitch Deck", desc: "Investor-ready presentations that compel and convert.", image: pitchImg, slug: "building-pitch-deck" },
+  { title: "Strategic Value Advisory", desc: "Actionable insights to enhance value and drive sustainable growth.", image: officeImg, slug: "strategic-value-advisory" },
 ];
 
 const whyChoose = [
@@ -282,18 +282,18 @@ const Index = () => (
               <Link
                 to={`/services/${svc.slug}`}
                 className="group relative rounded-2xl overflow-hidden block"
-                style={{ height: 240 }}
+                style={{ height: 320 }}
               >
-                <img src={svc.image} alt={svc.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#012241]/70 via-black/15 to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 group-hover:bg-white/15 transition-colors duration-300">
-                  <div className="flex items-start justify-between gap-2">
+                <img src={svc.image} alt={svc.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#012241]/90 via-[#012241]/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <div className="flex items-end justify-between gap-3">
                     <div>
-                      <p className="text-white font-semibold text-sm">{svc.title}</p>
-                      <p className="text-white/70 text-xs mt-0.5 leading-relaxed">{svc.desc}</p>
+                      <p className="text-white font-bold text-base leading-snug mb-1">{svc.title}</p>
+                      <p className="text-white/65 text-xs leading-relaxed">{svc.desc}</p>
                     </div>
-                    <div className="shrink-0 bg-white/20 backdrop-blur-sm rounded-full p-1.5 group-hover:bg-[#4BD1A0]/80 transition-colors duration-300">
-                      <ArrowUpRight className="w-3.5 h-3.5 text-white" />
+                    <div className="shrink-0 bg-[#4BD1A0] rounded-full p-2 group-hover:scale-110 transition-transform duration-300">
+                      <ArrowUpRight className="w-4 h-4 text-white" />
                     </div>
                   </div>
                 </div>
