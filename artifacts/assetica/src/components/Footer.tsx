@@ -21,7 +21,7 @@ const Footer = () => (
         <div>
           <div className="flex items-center gap-2 mb-5">
             <img src={logo} alt="Assetica" className="h-10 w-auto brightness-0 invert" />
-            <span style={{ fontFamily: "'Bebas Neue', sans-serif", letterSpacing: "0.12em" }} className="text-2xl text-white">ASSETICA</span>
+            <span className="font-montserrat font-bold text-xl tracking-widest text-white">ASSETICA</span>
           </div>
           <p className="text-sm leading-relaxed mb-6" style={{ color: "rgba(226,232,240,0.65)" }}>
             Assetica is a leading independent valuation firm serving clients across the UAE, UK, and globally. We deliver precise, defensible valuations for businesses and assets.
