@@ -48,7 +48,6 @@ const ContactForm = () => {
           <option>Financial Modelling</option>
           <option>Buyer & Seller Negotiation</option>
           <option>Tax Valuation</option>
-          <option>Machinery & Equipment Valuation</option>
           <option>Strategic Value Advisory</option>
           <option>Business Planning</option>
           <option>General Enquiry</option>

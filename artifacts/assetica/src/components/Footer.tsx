@@ -9,7 +9,6 @@ const services = [
   { name: "Financial Modelling", slug: "financial-modelling" },
   { name: "Buyer & Seller Negotiation", slug: "buyer-seller-negotiation" },
   { name: "Tax Valuation", slug: "tax-valuation" },
-  { name: "Machinery & Equipment Valuation", slug: "machinery-equipment-valuation" },
   { name: "Strategic Value Advisory", slug: "strategic-value-advisory" },
   { name: "Business Planning", slug: "business-planning" },
 ];

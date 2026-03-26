@@ -125,25 +125,6 @@ const services: Record<string, {
       { q: "How does UAE corporate tax affect business valuation requirements?", a: "The introduction of UAE corporate tax at 9% from June 2023 has created new valuation obligations for businesses — particularly around related-party transactions, group restructurings, and the recognition of goodwill and intangible assets. Businesses that were previously not required to obtain formal valuations may now need them for tax compliance. Assetica helps businesses understand and fulfil these new valuation obligations." },
     ],
   },
-  "machinery-equipment-valuation": {
-    title: "Machinery & Equipment Valuation", subtitle: "Asset Appraisal for All Industries",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1800&q=80",
-    intro: "Assetica offers experience, reliability and transparency in the valuation of machinery and equipment for virtually every industry. Our certified appraisers deliver comprehensive asset valuations you can trust.",
-    points: ["Manufacturing equipment valuation","Construction and heavy machinery","Medical and laboratory equipment","Oil and gas plant and equipment","Agricultural machinery","IT and technology assets","Fleet and transportation assets","Industrial process equipment"],
-    process: [
-      { step: "01", title: "Asset Register Review", desc: "Review of your asset register and identification of assets requiring valuation." },
-      { step: "02", title: "Physical Inspection", desc: "On-site inspection of machinery and equipment by certified appraisers." },
-      { step: "03", title: "Market Research", desc: "Research of comparable market transactions and replacement cost data." },
-      { step: "04", title: "Valuation Report", desc: "Comprehensive report with individual and portfolio valuations." },
-    ],
-    faqs: [
-      { q: "Why would a business in Dubai need a machinery and equipment valuation?", a: "There are several common reasons: obtaining asset-backed financing from UAE banks, insurance purposes to ensure adequate coverage, buy-sell transactions where assets form part of the deal consideration, business liquidation or restructuring, financial reporting under IFRS (fair value of property, plant and equipment), estate planning, and legal disputes. Assetica prepares valuations that satisfy all of these purposes." },
-      { q: "What valuation basis does Assetica use for machinery?", a: "We value on the basis most appropriate for the intended purpose. The main bases are: Market Value (what the asset would sell for between willing parties), Depreciated Replacement Cost (the cost to replace the asset less depreciation — typically used for insurance or financial reporting), and Orderly Liquidation Value (the amount expected in a structured sale). We always clearly state the basis of valuation in our reports." },
-      { q: "Does Assetica value machinery and equipment on-site in Dubai and the UAE?", a: "Yes. Our certified appraisers conduct on-site inspections across Dubai, Abu Dhabi, Sharjah, and throughout the UAE. Physical inspection is a standard part of our machinery and equipment valuation process — we assess the condition, age, utilization, and remaining useful life of each asset to ensure our valuations accurately reflect the physical state of the equipment." },
-      { q: "Which industries does Assetica cover for machinery valuation in the UAE?", a: "Assetica covers all major industries present in the UAE including manufacturing, construction, oil and gas, logistics and transportation, healthcare and medical, food and beverage processing, hospitality, retail, agriculture, and technology. We also value specialist assets such as marine equipment, aviation assets, printing and media equipment, and energy generation assets." },
-      { q: "How does machinery and equipment valuation affect a UAE business sale?", a: "In a business sale, plant, machinery, and equipment are often among the most significant tangible assets. An independent, professionally prepared asset valuation ensures sellers achieve fair value and gives buyers confidence in the asset quality. It also informs negotiation around price adjustments, asset write-downs, and warranties. Assetica's valuations are accepted by banks, legal advisors, and regulatory authorities throughout the UAE." },
-    ],
-  },
   "strategic-value-advisory": {
     title: "Strategic Value Advisory", subtitle: "Value Enhancement Consulting",
     image: "https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=1800&q=80",
@@ -293,7 +274,6 @@ const ServiceDetail = () => {
                     { name: "Financial Modelling", slug: "financial-modelling" },
                     { name: "Buyer & Seller Negotiation", slug: "buyer-seller-negotiation" },
                     { name: "Tax Valuation", slug: "tax-valuation" },
-                    { name: "Machinery & Equipment Valuation", slug: "machinery-equipment-valuation" },
                     { name: "Strategic Value Advisory", slug: "strategic-value-advisory" },
                     { name: "Business Planning", slug: "business-planning" },
                   ]

@@ -13,7 +13,6 @@ const officeImg = "https://images.unsplash.com/photo-1573164574511-73c773193279?
 const meetingImg = "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80";
 const dueDiligenceImg = "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80";
 const pitchImg = "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80";
-const machineryImg = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80";
 const taxImg = "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80";
 const cityDubaiImg = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80";
 
@@ -21,7 +20,7 @@ const serviceCards = [
   { title: "Due Diligence", desc: "Thorough research and analysis revealing your business's strengths, weaknesses, and growth potential.", image: dueDiligenceImg, slug: "due-diligence" },
   { title: "Financial Modelling", desc: "Precise valuations using financial metrics, market trends, and industry benchmarks.", image: taxImg, slug: "financial-modelling" },
   { title: "Building Pitch Deck", desc: "Compelling presentations highlighting your company's value proposition and growth prospects.", image: pitchImg, slug: "building-pitch-deck" },
-  { title: "Machinery & Equipment Valuation", desc: "Expert valuation of machinery and equipment for virtually every industry.", image: machineryImg, slug: "machinery-equipment-valuation" },
+  { title: "Strategic Value Advisory", desc: "Insights to enhance your company's overall value and ensure long-term sustainable growth.", image: officeImg, slug: "strategic-value-advisory" },
 ];
 
 const whyChoose = [
@@ -36,7 +35,7 @@ const whyChoose = [
 const homepageFaqs = [
   {
     q: "What business valuation services does Assetica offer in Dubai?",
-    a: "Assetica offers a comprehensive range of business valuation services in Dubai including due diligence, business structuring, pitch deck development, financial modelling, buyer and seller negotiation, tax valuation, machinery and equipment valuation, strategic value advisory, and business planning. We serve clients across the UAE, UK, and globally.",
+    a: "Assetica offers a comprehensive range of business valuation services in Dubai including due diligence, business structuring, pitch deck development, financial modelling, buyer and seller negotiation, tax valuation, strategic value advisory, and business planning. We serve clients across the UAE, UK, and globally.",
   },
   {
     q: "Why should I choose Assetica for business valuation in Dubai?",
@@ -225,7 +224,7 @@ const Index = () => (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
           <div className="text-center"><CounterStat end={30} suffix="+" label="Years Experience" /></div>
           <div className="text-center"><CounterStat end={500} suffix="+" label="Valuations Completed" /></div>
-          <div className="text-center"><CounterStat end={9} suffix="" label="Core Service Lines" /></div>
+          <div className="text-center"><CounterStat end={8} suffix="" label="Core Service Lines" /></div>
           <div className="text-center"><CounterStat end={15} suffix="+" label="Countries Served" /></div>
         </div>
       </div>

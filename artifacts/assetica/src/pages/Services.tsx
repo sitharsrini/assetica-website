@@ -52,13 +52,6 @@ const services = [
     badge: "Regulatory Compliant",
   },
   {
-    slug: "machinery-equipment-valuation",
-    title: "Machinery & Equipment Valuation",
-    desc: "Assetica offers experience, reliability and transparency in the valuation of machinery and equipment for virtually every industry. Comprehensive asset appraisals you can trust.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
-    badge: "All Industries",
-  },
-  {
     slug: "strategic-value-advisory",
     title: "Strategic Value Advisory",
     desc: "We offer insights to enhance your company's overall value and ensure long-term growth. Strategic guidance aligned with your business objectives and market opportunities.",
