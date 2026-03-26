@@ -28,7 +28,13 @@ const contactFaqs = [
 ];
 
 const Contact = () => (
-  <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+  <>
+    <SEOHead
+      title="Contact Assetica | Business Valuation Enquiries — Dubai & UK"
+      description="Get in touch with Assetica's valuation experts in Dubai & London. Free initial consultation for business valuation, M&A advisory and due diligence."
+      canonical="/contact"
+    />
+    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
     <Navbar />
 
     <div className="pt-[72px] px-4 md:px-8">
@@ -133,6 +139,7 @@ const Contact = () => (
 
     <Footer />
   </div>
+  </>
 );
 
 export default Contact;

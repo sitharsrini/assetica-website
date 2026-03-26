@@ -72,7 +72,13 @@ const blogFaqs = [
 ];
 
 const Blog = () => (
-  <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+  <>
+    <SEOHead
+      title="Business Valuation Blog | Expert Insights from Assetica Dubai"
+      description="Expert insights on business valuation, M&A, due diligence and financial advisory from Assetica's team in Dubai, UAE & UK."
+      canonical="/blog"
+    />
+    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
     <Navbar />
     <div className="pt-[72px] px-4 md:px-8">
       <div className="relative rounded-3xl overflow-hidden" style={{ height: "clamp(250px, 40vh, 360px)" }}>
@@ -124,6 +130,7 @@ const Blog = () => (
     </div>
     <Footer />
   </div>
+  </>
 );
 
 export default Blog;

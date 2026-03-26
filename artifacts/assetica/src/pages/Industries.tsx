@@ -46,7 +46,13 @@ const industries = [
 ];
 
 const Industries = () => (
-  <div className="min-h-screen flex flex-col">
+  <>
+    <SEOHead
+      title="Industries We Serve | Business Valuation Across Dubai & UAE"
+      description="Assetica provides expert business valuation across Banking, Real Estate, Manufacturing, Shipping, Legal and Government sectors in Dubai, UAE, GCC & UK."
+      canonical="/industries"
+    />
+    <div className="min-h-screen flex flex-col">
     <Navbar />
 
     <section className="pt-32 pb-16 md:pt-40 md:pb-20" style={{ backgroundColor: "#0f2044" }}>
@@ -101,6 +107,7 @@ const Industries = () => (
 
     <Footer />
   </div>
+  </>
 );
 
 export default Industries;

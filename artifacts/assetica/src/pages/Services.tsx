@@ -92,7 +92,13 @@ const servicesFaqs = [
 ];
 
 const Services = () => (
-  <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+  <>
+    <SEOHead
+      title="Business Valuation Services in Dubai & UAE | Assetica"
+      description="Expert business valuation, due diligence, financial modelling, tax valuation and strategic advisory in Dubai, UAE, GCC, UK & Europe. Free consultation."
+      canonical="/services"
+    />
+    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
     <Navbar />
 
     <div className="pt-[72px] px-4 md:px-8">
@@ -174,6 +180,7 @@ const Services = () => (
 
     <Footer />
   </div>
+  </>
 );
 
 export default Services;
