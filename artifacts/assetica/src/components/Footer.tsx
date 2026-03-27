@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
-import logo from "@/assets/logo.png";
+import { FaInstagram } from "react-icons/fa";
+import logoIcon from "@/assets/logo-icon.png";
 
 const services = [
   { name: "Due Diligence", slug: "due-diligence" },
@@ -19,18 +20,19 @@ const Footer = () => (
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
         <div>
-          <div className="flex items-center mb-5">
-            <img src={logo} alt="Assetica" className="h-9 w-auto brightness-0 invert" />
+          <div className="flex items-center gap-2 mb-5">
+            <img src={logoIcon} alt="Assetica" className="h-9 w-auto" />
+            <span className="font-bold text-xl tracking-widest text-white" style={{ fontFamily: "'Montserrat', sans-serif" }}>ASSETICA</span>
           </div>
           <p className="text-sm leading-relaxed mb-6" style={{ color: "rgba(226,232,240,0.65)" }}>
             Assetica is a leading independent valuation firm serving clients across the UAE, UK, and globally. We deliver precise, defensible valuations for businesses and assets.
           </p>
           <div className="flex items-center gap-3 mb-6">
             {[
-              { href: "https://linkedin.com/company/assetica", icon: Linkedin, label: "LinkedIn" },
-              { href: "https://twitter.com/assetica", icon: Twitter, label: "Twitter" },
-              { href: "https://facebook.com/assetica", icon: Facebook, label: "Facebook" },
-            ].map(({ href, icon: Icon, label }) => (
+              { href: "https://linkedin.com/company/assetica", icon: Linkedin, label: "LinkedIn", isReactIcon: false },
+              { href: "https://instagram.com/assetica", icon: FaInstagram, label: "Instagram", isReactIcon: true },
+              { href: "https://facebook.com/assetica", icon: Facebook, label: "Facebook", isReactIcon: false },
+            ].map(({ href, icon: Icon, label, isReactIcon }) => (
               <a
                 key={label}
                 href={href}
@@ -40,7 +42,7 @@ const Footer = () => (
                 className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200"
                 style={{ backgroundColor: "rgba(75,209,160,0.15)", color: "#4BD1A0" }}
               >
-                <Icon className="w-3.5 h-3.5" />
+                {isReactIcon ? <Icon size={14} /> : <Icon className="w-3.5 h-3.5" />}
               </a>
             ))}
           </div>
