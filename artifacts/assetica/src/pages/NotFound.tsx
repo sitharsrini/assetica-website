@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const NotFound = () => (
-  <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+  <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
     <Navbar />
     <div className="flex flex-col items-center justify-center min-h-[70vh] px-6 text-center">
       <p className="font-display font-bold text-8xl mb-4" style={{ color: "#4BD1A0" }}>404</p>

@@ -34,7 +34,7 @@ const Contact = () => (
       description="Get in touch with Assetica's valuation experts in Dubai & London. Free initial consultation for business valuation, M&A advisory and due diligence."
       canonical="/contact"
     />
-    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
     <Navbar />
 
     <div className="pt-[72px] px-4 md:px-8">

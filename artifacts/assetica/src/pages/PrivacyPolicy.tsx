@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const PrivacyPolicy = () => (
-  <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+  <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
     <Navbar />
     <div className="pt-[72px] px-4 md:px-8">
       <div className="relative rounded-3xl overflow-hidden" style={{ height: "clamp(200px, 30vh, 300px)", backgroundColor: "#012241" }}>

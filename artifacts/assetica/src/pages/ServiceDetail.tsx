@@ -189,7 +189,7 @@ const ServiceDetail = () => {
   } : null;
 
   if (!svc) return (
-    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
       <Navbar />
       <div className="pt-32 text-center">
         <h1 className="font-display font-bold text-2xl" style={{ color: "#012241" }}>Service not found</h1>
@@ -207,7 +207,7 @@ const ServiceDetail = () => {
         canonical={`/services/${slug}`}
         schema={serviceSchema || undefined}
       />
-      <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+      <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
       <Navbar />
       <div className="pt-[72px] px-4 md:px-8">
         <div className="relative rounded-3xl overflow-hidden" style={{ height: "clamp(280px, 45vh, 420px)" }}>

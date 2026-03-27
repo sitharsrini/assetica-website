@@ -48,7 +48,7 @@ const About = () => (
       description="Assetica brings 30+ years of valuation expertise across Dubai, GCC, UK & Europe. Trusted by 500+ businesses for M&A, due diligence and strategic advisory."
       canonical="/about"
     />
-    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
     <Navbar />
 
     <div className="pt-[72px] px-4 md:px-8">

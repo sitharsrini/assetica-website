@@ -126,7 +126,7 @@ const Index = () => (
       canonical="/"
       schema={[organizationSchema, localBusinessSchema, webSiteSchema]}
     />
-    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
     <Navbar />
 
     {/* Hero Card */}

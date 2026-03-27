@@ -98,7 +98,7 @@ const Services = () => (
       description="Expert business valuation, due diligence, financial modelling, tax valuation and strategic advisory in Dubai, UAE, GCC, UK & Europe. Free consultation."
       canonical="/services"
     />
-    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
     <Navbar />
 
     <div className="pt-[72px] px-4 md:px-8">

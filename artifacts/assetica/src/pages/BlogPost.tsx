@@ -11,7 +11,7 @@ const BlogPost = () => {
   const post = blogPosts.find(p => p.slug === slug);
 
   if (!post) return (
-    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
       <Navbar />
       <div className="pt-32 text-center">
         <h1 className="font-display font-bold text-2xl" style={{ color: "#012241" }}>Post not found</h1>
@@ -22,7 +22,7 @@ const BlogPost = () => {
   );
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#f4f6f9" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
       <Navbar />
       <div className="pt-[72px] px-4 md:px-8">
         <div className="relative rounded-3xl overflow-hidden" style={{ height: "clamp(280px, 45vh, 420px)" }}>
