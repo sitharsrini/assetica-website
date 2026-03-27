@@ -23,13 +23,13 @@
 
 @layer base {
   :root {
-    --background: 210 30% 97%;
+    --background: 0 0% 100%;
     --foreground: 215 60% 8%;
     --card: 0 0% 100%;
     --card-foreground: 215 60% 8%;
     --primary: 162 55% 55%;
     --primary-foreground: 0 0% 100%;
-    --muted: 210 25% 95%;
+    --muted: 0 0% 96%;
     --muted-foreground: 210 15% 50%;
     --border: 210 20% 90%;
     --input: 210 20% 90%;
