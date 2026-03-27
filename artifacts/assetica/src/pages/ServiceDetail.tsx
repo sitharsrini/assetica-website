@@ -14,7 +14,7 @@ const services: Record<string, {
 }> = {
   "due-diligence": {
     title: "Due Diligence", subtitle: "Risk Management & Business Analysis",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1800&q=80",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1800&q=80",
     intro: "Our thorough research and analysis reveal your business's strengths, weaknesses, and growth potential. Assetica's due diligence service minimizes risk and maximizes investment confidence in every transaction.",
     points: ["Comprehensive financial statement analysis","Legal and regulatory compliance review","Operational efficiency assessment","Market positioning evaluation","Risk identification and quantification","Growth potential analysis","Management and team evaluation","Technology and IP assessment"],
     process: [
@@ -34,7 +34,7 @@ const services: Record<string, {
   },
   "business-structuring": {
     title: "Business Structuring", subtitle: "Company Formation & Corporate Structure",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80",
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80",
     intro: "We establish a strong valuation foundation by assessing the legal, financial, and operational aspects of your business. Our business structuring service ensures your corporate structure is optimized for valuation, investment, and growth.",
     points: ["Legal entity structure optimization","Shareholder agreement review","Corporate governance assessment","Financial structure analysis","Tax-efficient structuring advice","Investment readiness preparation","Regulatory compliance review","Exit strategy alignment"],
     process: [
@@ -54,7 +54,7 @@ const services: Record<string, {
   },
   "building-pitch-deck": {
     title: "Building Pitch Deck", subtitle: "Investor-Ready Presentations",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1800&q=80",
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1800&q=80",
     intro: "We craft compelling presentations that highlight your company's value proposition, financials, and growth prospects. Our pitch decks are designed to captivate investors and stakeholders from the first slide.",
     points: ["Executive summary and company overview","Problem and solution narrative","Market opportunity sizing","Business model articulation","Financial performance and projections","Competitive landscape analysis","Team and credentials showcase","Funding requirements and use of funds"],
     process: [
@@ -74,7 +74,7 @@ const services: Record<string, {
   },
   "financial-modelling": {
     title: "Financial Modelling", subtitle: "Business Financial Valuation",
-    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1800&q=80",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1800&q=80",
     intro: "Our precise valuation uses financial metrics, market trends, and industry benchmarks to determine your company's worth. Advanced financial models that project future performance and guide strategic decision-making.",
     points: ["Discounted cash flow (DCF) analysis","Comparable company analysis","Precedent transactions analysis","Revenue projection modelling","EBITDA normalisation","Working capital analysis","Sensitivity and scenario analysis","Financial statement modelling"],
     process: [
@@ -94,7 +94,7 @@ const services: Record<string, {
   },
   "buyer-seller-negotiation": {
     title: "Buyer & Seller Negotiation", subtitle: "M&A Advisory & Deal Facilitation",
-    image: "https://images.unsplash.com/photo-1521791055366-0d553872952f?auto=format&fit=crop&w=1800&q=80",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=80",
     intro: "We facilitate successful negotiations during mergers, acquisitions, or sales, ensuring favorable outcomes for all parties. Our experienced team acts as skilled intermediaries protecting your interests throughout the deal process.",
     points: ["Independent valuation as negotiation anchor","Deal structuring advice","Term sheet review and negotiation","Price gap bridging strategies","Letter of intent (LOI) guidance","SPA negotiation support","Completion mechanics advice","Post-completion adjustment mechanisms"],
     process: [
@@ -114,7 +114,7 @@ const services: Record<string, {
   },
   "tax-valuation": {
     title: "Tax Valuation", subtitle: "Tax-Compliant Business Valuations",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=80",
+    image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1800&q=80",
     intro: "We assess tax impacts and develop optimized strategies to enhance your company's financial health. Our tax valuations are fully compliant with UAE, UK, and international tax regulations.",
     points: ["Transfer pricing valuations","Share-based compensation valuations","Estate and gift tax valuations","Intangible asset valuations for tax","Thin capitalization analysis","Business reorganization valuations","Intra-group transaction valuations","VAT and corporate tax compliance"],
     process: [
@@ -134,7 +134,7 @@ const services: Record<string, {
   },
   "strategic-value-advisory": {
     title: "Strategic Value Advisory", subtitle: "Value Enhancement Consulting",
-    image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1800&q=80",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=80",
     intro: "We offer insights to enhance your company's overall value and ensure long-term growth. Our strategic value advisory service goes beyond valuation to provide a roadmap for sustainable value creation.",
     points: ["Value gap analysis","Value driver identification","Strategic growth planning","Operational efficiency optimization","Revenue enhancement strategies","Cost reduction opportunities","M&A target identification","Exit readiness assessment"],
     process: [
@@ -154,7 +154,7 @@ const services: Record<string, {
   },
   "business-planning": {
     title: "Business Planning", subtitle: "Advanced Financial Business Plans",
-    image: "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?auto=format&fit=crop&w=1800&q=80",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1800&q=80",
     intro: "Our advanced financial models project future performance and guide strategic decision-making. Comprehensive business plans that attract investment and drive sustainable growth in competitive markets.",
     points: ["Executive summary and business overview","Market analysis and competitive positioning","Revenue model and financial projections","Operational plan and resource requirements","Marketing and sales strategy","Risk assessment and mitigation plan","Funding requirements and use of funds","Exit strategy and investor returns"],
     process: [

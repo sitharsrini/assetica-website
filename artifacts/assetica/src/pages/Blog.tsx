@@ -7,7 +7,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
 import FaqSection from "@/components/FaqSection";
 
-const heroImg = "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1800&q=80";
+const heroImg = "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1800&q=80";
 
 export const blogPosts = [
   {
@@ -15,7 +15,7 @@ export const blogPosts = [
     title: "Navigating the World of Business Valuation: A Step-by-Step Guide to Buying a Running Business",
     excerpt: "Acquiring a running business can be a strategic move to enhance your investment portfolio, diversify income streams, or venture into a new sector.",
     date: "Oct 4, 2024", readTime: "3 min read",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80",
     category: "Business Valuation",
     content: `<h2>Why Valuation Matters When Buying a Business</h2><p>Acquiring a running business can be a strategic move to enhance your investment portfolio, diversify income streams, or venture into a new industry sector. A precise valuation ensures you pay a fair price, understand the true risks, and identify growth opportunities. At Assetica, we guide buyers through every stage of this complex process.</p><h2>Step 1: Understand the Valuation Methods</h2><p>There are three primary approaches to business valuation: the income approach (DCF), the market approach (comparables), and the asset-based approach. Each offers different insights depending on the nature of the business.</p><h2>Step 2: Due Diligence is Non-Negotiable</h2><p>Thorough due diligence involves analyzing financial statements, contracts, customer relationships, intellectual property, and contingent liabilities that could affect future performance.</p><h2>Step 3: Engage Independent Valuation Experts</h2><p>An independent valuation from Assetica provides an unbiased opinion of value that protects your interests and provides a credible foundation for negotiations.</p>`,
   },
@@ -24,7 +24,7 @@ export const blogPosts = [
     title: "Navigating Business Risks: Effective Risk Management through Strategic Value Advisory",
     excerpt: "In today's rapidly evolving business landscape, navigating risks effectively is crucial for maintaining a competitive edge and achieving sustainable growth.",
     date: "Sep 27, 2024", readTime: "3 min read",
-    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80",
     category: "Strategic Advisory",
     content: `<h2>The Intersection of Risk and Value</h2><p>In today's rapidly evolving business landscape, navigating risks effectively is crucial for maintaining a competitive edge. Strategic Value Advisory from Assetica helps businesses identify, quantify, and manage risks that could impact their overall value.</p><h2>Types of Business Risks We Address</h2><p>Market risk, operational risk, financial risk, regulatory risk, and reputational risk all significantly impact your company's valuation.</p><h2>How Strategic Value Advisory Helps</h2><p>Our advisory service provides actionable insights to enhance your company's overall value while mitigating risks that could erode it.</p>`,
   },
@@ -33,7 +33,7 @@ export const blogPosts = [
     title: "Selling a Business? Here's How to Determine the Optimal Timing",
     excerpt: "Selling a business at the right time is essential for maximizing success and profitability. Entrepreneurs must consider market conditions, financial performance, and sale preparation strategies.",
     date: "Sep 20, 2024", readTime: "3 min read",
-    image: "https://images.unsplash.com/photo-1521791055366-0d553872952f?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=900&q=80",
     category: "Business Sale",
     content: `<h2>Why Timing is Everything in Business Sales</h2><p>Selling a business at the right time is essential for maximizing success and profitability. Consider market conditions, financial performance, and comprehensive sale preparation strategies.</p><h2>Key Indicators That It's the Right Time to Sell</h2><p>Strong financial performance, favorable market conditions, personal readiness, and strategic interest from potential buyers are all positive signals.</p><h2>The Role of Professional Valuation</h2><p>Assetica's business valuation and negotiation advisory services ensure you enter sale negotiations from a position of strength, armed with a credible, independent opinion of value.</p>`,
   },
@@ -42,7 +42,7 @@ export const blogPosts = [
     title: "Safeguard Your Company: Mitigating Risks in Business Valuation",
     excerpt: "Protect your business from valuation-related risks with Assetica's expertise. Understanding common pitfalls can save you significant time and money.",
     date: "Aug 8, 2024", readTime: "3 min read",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80",
     category: "Risk Management",
     content: `<h2>Common Risks in Business Valuation</h2><p>Business valuations carry inherent risks if not conducted with rigor and independence. Overstated asset values, understated liabilities, and aggressive revenue projections are common pitfalls that can expose companies to significant financial and legal risks.</p><h2>How to Mitigate Valuation Risks</h2><p>Engaging an independent, accredited valuation firm like Assetica is the most effective way to mitigate valuation risks. Our transparent methodology and defensible assumptions protect our clients from challenge.</p>`,
   },
@@ -51,7 +51,7 @@ export const blogPosts = [
     title: "How to Create a Pitch Deck: A Step-by-Step Guide",
     excerpt: "Assetica crafts pitch decks that captivate and highlight your value, financials, and growth prospects for maximum investor appeal.",
     date: "Jul 31, 2024", readTime: "3 min read",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80",
     category: "Pitch Deck",
     content: `<h2>What Makes a Great Pitch Deck?</h2><p>A compelling pitch deck communicates your company's story, value proposition, financial performance, and growth prospects in a clear, visually engaging format that captivates investors.</p><h2>Key Sections Every Pitch Deck Needs</h2><p>Executive summary, problem and solution, market opportunity, business model, financials and projections, competitive landscape, team, and funding requirements.</p><h2>The Assetica Approach</h2><p>Our building pitch deck service combines financial analysis, valuation expertise, and strategic storytelling to create presentations that drive successful fundraising outcomes.</p>`,
   },
@@ -60,7 +60,7 @@ export const blogPosts = [
     title: "Maximize Your Business Potential with Precise Financial Valuations",
     excerpt: "In the competitive business world, understanding your company's true value is crucial — whether you're seeking investment, planning a merger, or making strategic decisions.",
     date: "Jul 17, 2024", readTime: "2 min read",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
     category: "Financial Valuation",
     content: `<h2>The Importance of Knowing Your Business's True Value</h2><p>Whether you're seeking investment, planning a merger, preparing for a sale, or making strategic growth decisions — a precise financial valuation is your foundation for confident decision-making.</p><h2>Assetica's Approach to Financial Modelling</h2><p>Our financial modelling service uses advanced analytical tools, real-time market data, and deep industry knowledge to produce valuations that are both precise and defensible. We help you understand what the numbers mean for your strategy.</p>`,
   },

@@ -11,11 +11,11 @@ import SEOHead from "@/components/SEOHead";
 import { FeatureHighlightCard } from "@/components/ui/feature-highlight-card";
 
 const heroImg = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80";
-const officeImg = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80";
-const meetingImg = "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=900&q=80";
-const dueDiligenceImg = "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80";
-const pitchImg = "https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=900&q=80";
-const taxImg = "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=80";
+const officeImg = "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80";
+const meetingImg = "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80";
+const dueDiligenceImg = "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80";
+const pitchImg = "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80";
+const taxImg = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80";
 const cityDubaiImg = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80";
 
 const serviceCards = [
@@ -297,7 +297,7 @@ const Index = () => (
     {/* Feature Highlight Card */}
     <div className="max-w-7xl mx-auto px-4 md:px-8 py-16">
       <FeatureHighlightCard
-        imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
+        imageSrc="https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=900&q=80"
         imageAlt="Business valuation analytics dashboard"
         title="Precision Valuation, Proven Results"
         description="Our expert team combines 30+ years of experience with cutting-edge financial modelling to deliver valuations that stand up in boardrooms, courts, and across borders. Trusted by 500+ businesses in Dubai, GCC, UK & Europe."

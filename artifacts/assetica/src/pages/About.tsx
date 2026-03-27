@@ -8,8 +8,8 @@ import ContactForm from "@/components/ContactForm";
 import SEOHead from "@/components/SEOHead";
 
 const heroImg = "https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=1800&q=80";
-const teamImg = "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80";
-const officeImg = "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?auto=format&fit=crop&w=900&q=80";
+const teamImg = "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80";
+const officeImg = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80";
 
 const reasons = [
   { icon: Target, title: "Comprehensive Valuation Solutions", desc: "Discover Assetica's business valuation services around the world, offering independent valuations for businesses and assets. Ensure compliance and make confident decisions." },
