@@ -24,7 +24,7 @@ export default async function handler(req) {
     // Notify Assetica team
     const teamEmail = await resend.emails.send({
       from: "Assetica Website <onboarding@resend.dev>",
-      to: ["info@assetica.net"],
+      to: ["info@assetica.net", "srinivasan@gtag.ae"],
       replyTo: email,
       subject: `New Enquiry from ${firstName} ${lastName}${service ? ` — ${service}` : ""}`,
       html: `
