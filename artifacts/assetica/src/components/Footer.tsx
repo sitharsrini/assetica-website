@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import logoIcon from "@/assets/logo-icon.png";
 
 const services = [
@@ -31,6 +31,7 @@ const Footer = () => (
             {[
               { href: "https://linkedin.com/company/assetica", icon: Linkedin, label: "LinkedIn", isReactIcon: false },
               { href: "https://instagram.com/assetica", icon: FaInstagram, label: "Instagram", isReactIcon: true },
+              { href: "https://x.com/assetica", icon: FaXTwitter, label: "X", isReactIcon: true },
               { href: "https://facebook.com/assetica", icon: Facebook, label: "Facebook", isReactIcon: false },
             ].map(({ href, icon: Icon, label, isReactIcon }) => (
               <a
