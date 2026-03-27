@@ -266,7 +266,6 @@ const Index = () => (
               {[
                 { label: "Business Valuation", value: 85 },
                 { label: "Financial Modelling", value: 75 },
-                { label: "Machinery & Equipment", value: 65 },
               ].map(({ label, value }) => (
                 <div key={label}>
                   <div className="flex justify-between text-xs text-slate-500 mb-1">
