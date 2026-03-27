@@ -71,7 +71,6 @@
     "zod": "^3.25.0"
   },
   "dependencies": {
-    "@rollup/rollup-darwin-arm64": "^4.60.0",
     "react-helmet-async": "^3.0.0",
     "react-router-dom": "^7.13.2",
     "resend": "^4.0.0"
