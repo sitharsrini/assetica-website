@@ -264,16 +264,15 @@ const Index = () => (
             </div>
             <div className="space-y-3 mt-6">
               {[
-                { label: "Business Valuation", value: 85 },
-                { label: "Financial Modelling", value: 75 },
-              ].map(({ label, value }) => (
+                "Business Valuation",
+                "Financial Modelling",
+                "Due Diligence",
+              ].map((label) => (
                 <div key={label}>
                   <div className="text-xs text-slate-500 mb-1">
                     <span>{label}</span>
                   </div>
-                  <div className="w-full bg-slate-100 rounded-full h-1.5">
-                    <div className="h-1.5 rounded-full" style={{ width: `${value}%`, backgroundColor: "#4BD1A0" }} />
-                  </div>
+                  <div className="w-full rounded-full h-1.5" style={{ backgroundColor: "#4BD1A0" }} />
                 </div>
               ))}
             </div>
