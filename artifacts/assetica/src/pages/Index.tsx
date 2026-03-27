@@ -8,6 +8,7 @@ import CounterStat from "@/components/CounterStat";
 import FaqSection from "@/components/FaqSection";
 import ContactForm from "@/components/ContactForm";
 import SEOHead from "@/components/SEOHead";
+import { FeatureHighlightCard } from "@/components/ui/feature-highlight-card";
 
 const heroImg = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80";
 const officeImg = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80";
@@ -294,6 +295,18 @@ const Index = () => (
         </div>
       </div>
     </AnimatedSection>
+
+    {/* Feature Highlight Card */}
+    <div className="max-w-7xl mx-auto px-4 md:px-8 py-16">
+      <FeatureHighlightCard
+        imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
+        imageAlt="Business valuation analytics dashboard"
+        title="Precision Valuation, Proven Results"
+        description="Our expert team combines 30+ years of experience with cutting-edge financial modelling to deliver valuations that stand up in boardrooms, courts, and across borders. Trusted by 500+ businesses in Dubai, GCC, UK & Europe."
+        buttonText="Book a Free Consultation"
+        onButtonClick={() => window.location.href = '/contact'}
+      />
+    </div>
 
     {/* Why Choose Us */}
     <div className="max-w-7xl mx-auto px-4 md:px-8 pb-16">
