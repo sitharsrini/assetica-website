@@ -71,12 +71,30 @@ const blogFaqs = [
   { q: "Where can I learn more about business valuation methods?", a: "Our blog contains comprehensive guides on valuation methodologies including the income approach, market approach, and asset-based approach. Contact our team directly for a free consultation on the best approach for your business." },
 ];
 
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Assetica Business Valuation Blog",
+  "url": "https://assetica.net/blog",
+  "description": "Expert insights on business valuation, M&A, due diligence and financial advisory from Assetica's team in Dubai, UAE & UK.",
+  "publisher": { "@type": "Organization", "name": "Assetica", "url": "https://assetica.net", "logo": "https://assetica.net/logo.png" },
+  "blogPost": blogPosts.map(post => ({
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "url": `https://assetica.net/blog/${post.slug}`,
+    "datePublished": post.date,
+    "description": post.excerpt,
+    "author": { "@type": "Organization", "name": "Assetica" }
+  }))
+};
+
 const Blog = () => (
   <>
     <SEOHead
       title="Business Valuation Blog | Expert Insights from Assetica Dubai"
       description="Expert insights on business valuation, M&A, due diligence and financial advisory from Assetica's team in Dubai, UAE & UK."
       canonical="/blog"
+      schema={blogSchema}
     />
     <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
     <Navbar />

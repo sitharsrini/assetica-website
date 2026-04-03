@@ -118,13 +118,23 @@ const webSiteSchema = {
   }
 };
 
+const homepageFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": homepageFaqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+  }))
+};
+
 const Index = () => (
   <>
     <SEOHead
       title="Business Valuation Services in Dubai, UAE & UK | Assetica"
       description="Assetica, independent business valuation firm in Dubai & UK. Expert valuations for M&A, due diligence, tax, financial modelling and strategic advisory across UAE, GCC & Europe."
       canonical="/"
-      schema={[organizationSchema, localBusinessSchema, webSiteSchema]}
+      schema={[organizationSchema, localBusinessSchema, webSiteSchema, homepageFaqSchema]}
     />
     <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
     <Navbar />

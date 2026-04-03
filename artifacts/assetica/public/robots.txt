@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 
 Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
 
 Sitemap: https://assetica.net/sitemap.xml

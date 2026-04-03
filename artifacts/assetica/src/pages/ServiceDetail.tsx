@@ -208,6 +208,26 @@ const ServiceDetail = () => {
     "url": `https://assetica.net/services/${slug}`
   } : null;
 
+  const faqSchema = svc && svc.faqs?.length ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": svc.faqs.map((faq: { q: string; a: string }) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+    }))
+  } : null;
+
+  const breadcrumbSchema = svc ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://assetica.net" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://assetica.net/services" },
+      { "@type": "ListItem", "position": 3, "name": svc.title, "item": `https://assetica.net/services/${slug}` }
+    ]
+  } : null;
+
   if (!svc) return (
     <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
       <Navbar />
@@ -225,7 +245,7 @@ const ServiceDetail = () => {
         title={`${svc.title} Services in Dubai & UAE | Assetica`}
         description={svc.intro.slice(0, 155)}
         canonical={`/services/${slug}`}
-        schema={serviceSchema || undefined}
+        schema={[serviceSchema, faqSchema, breadcrumbSchema].filter(Boolean) as object[]}
       />
       <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
       <Navbar />

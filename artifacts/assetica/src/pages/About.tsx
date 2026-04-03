@@ -41,12 +41,40 @@ const aboutFaqs = [
   },
 ];
 
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Assetica",
+  "url": "https://assetica.net/about",
+  "description": "Assetica brings 30+ years of valuation expertise across Dubai, GCC, UK & Europe. Trusted by 500+ businesses for M&A, due diligence and strategic advisory.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Assetica",
+    "url": "https://assetica.net",
+    "logo": "https://assetica.net/logo.png",
+    "foundingLocation": "Dubai, UAE",
+    "numberOfEmployees": { "@type": "QuantitativeValue", "value": "10-50" },
+    "areaServed": ["AE", "GB", "SA", "KW", "BH", "QA", "OM", "EU"]
+  }
+};
+
+const aboutFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": aboutFaqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+  }))
+};
+
 const About = () => (
   <>
     <SEOHead
       title="About Assetica | 30+ Years of Business Valuation Expertise in Dubai"
       description="Assetica brings 30+ years of valuation expertise across Dubai, GCC, UK & Europe. Trusted by 500+ businesses for M&A, due diligence and strategic advisory."
       canonical="/about"
+      schema={[aboutPageSchema, aboutFaqSchema]}
     />
     <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
     <Navbar />

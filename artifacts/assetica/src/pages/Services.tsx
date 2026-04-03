@@ -102,12 +102,37 @@ const servicesFaqs = [
   },
 ];
 
+const servicesListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Business Valuation Services by Assetica",
+  "url": "https://assetica.net/services",
+  "itemListElement": services.map((svc, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": svc.title,
+    "url": `https://assetica.net/services/${svc.slug}`,
+    "description": svc.desc
+  }))
+};
+
+const servicesFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": servicesFaqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+  }))
+};
+
 const Services = () => (
   <>
     <SEOHead
       title="Business Valuation Services in Dubai & UAE | Assetica"
       description="Expert business valuation, due diligence, financial modelling, tax valuation and strategic advisory in Dubai, UAE, GCC, UK & Europe. Free consultation."
       canonical="/services"
+      schema={[servicesListSchema, servicesFaqSchema]}
     />
     <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
     <Navbar />

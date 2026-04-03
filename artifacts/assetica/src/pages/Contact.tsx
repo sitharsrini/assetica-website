@@ -27,12 +27,39 @@ const contactFaqs = [
   },
 ];
 
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Assetica",
+  "url": "https://assetica.net/contact",
+  "description": "Get in touch with Assetica's valuation experts in Dubai & London. Free initial consultation for business valuation, M&A advisory and due diligence.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Assetica",
+    "telephone": "+971521551198",
+    "email": "info@assetica.net",
+    "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" },
+    "openingHours": "Mo-Fr 09:00-18:00"
+  }
+};
+
+const contactFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": contactFaqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+  }))
+};
+
 const Contact = () => (
   <>
     <SEOHead
       title="Contact Assetica | Business Valuation Enquiries, Dubai & UK"
       description="Get in touch with Assetica's valuation experts in Dubai & London. Free initial consultation for business valuation, M&A advisory and due diligence."
       canonical="/contact"
+      schema={[contactPageSchema, contactFaqSchema]}
     />
     <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
     <Navbar />
