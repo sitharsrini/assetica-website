@@ -31,7 +31,7 @@ const whyChoose = [
   { icon: TrendingUp, title: "Advanced Analytical Tools", desc: "We leverage cutting-edge financial modelling and data analytics for precise valuations." },
   { icon: Award, title: "Regulatory Compliance", desc: "All valuations are conducted in full compliance with UAE, UK and international standards." },
   { icon: Star, title: "Personalized Consultation", desc: "Every client receives a dedicated valuation specialist and tailored service approach." },
-  { icon: CheckCircle, title: "Timely & Transparent Reporting", desc: "Clear, actionable reports delivered on time — so you can make decisions with confidence." },
+  { icon: CheckCircle, title: "Timely & Transparent Reporting", desc: "Clear, actionable reports delivered on time, so you can make decisions with confidence." },
 ];
 
 const homepageFaqs = [
@@ -45,7 +45,7 @@ const homepageFaqs = [
   },
   {
     q: "How does Assetica conduct a business valuation?",
-    a: "Our business valuation process involves a comprehensive approach — analyzing your financial statements, historical performance data, industry trends, current market conditions, competitive landscape, and other key factors to deliver a thorough and accurate assessment of your company's worth.",
+    a: "Our business valuation process involves a comprehensive approach, analyzing your financial statements, historical performance data, industry trends, current market conditions, competitive landscape, and other key factors to deliver a thorough and accurate assessment of your company's worth.",
   },
   {
     q: "What industries does Assetica cover for valuation services?",
@@ -57,7 +57,7 @@ const homepageFaqs = [
   },
   {
     q: "How do I get started with Assetica's valuation services?",
-    a: "Getting started is simple — contact us via phone at +971 52 155 1198, email info@assetica.net, or fill in our contact form. We offer free initial consultations and most quote requests receive a response within one business day.",
+    a: "Getting started is simple, contact us via phone at +971 52 155 1198, email info@assetica.net, or fill in our contact form. We offer free initial consultations and most quote requests receive a response within one business day.",
   },
 ];
 
@@ -122,7 +122,7 @@ const Index = () => (
   <>
     <SEOHead
       title="Business Valuation Services in Dubai, UAE & UK | Assetica"
-      description="Assetica — independent business valuation firm in Dubai & UK. Expert valuations for M&A, due diligence, tax, financial modelling and strategic advisory across UAE, GCC & Europe."
+      description="Assetica, independent business valuation firm in Dubai & UK. Expert valuations for M&A, due diligence, tax, financial modelling and strategic advisory across UAE, GCC & Europe."
       canonical="/"
       schema={[organizationSchema, localBusinessSchema, webSiteSchema]}
     />
@@ -146,7 +146,7 @@ const Index = () => (
             transition={{ duration: 0.5, delay: 0.2 }}
             className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 rounded-full px-4 py-1.5 mb-6 text-white/90 text-xs font-medium tracking-wide"
           >
-            Leaders in Business Valuation — UAE &amp; UK
+            Leaders in Business Valuation, UAE &amp; UK
           </motion.div>
 
           <motion.h1
@@ -156,8 +156,8 @@ const Index = () => (
             className="font-display font-bold text-white text-3xl md:text-5xl lg:text-6xl max-w-4xl leading-tight mb-5"
           >
             Expert{" "}
-            <span style={{ color: "#4BD1A0" }}>Business Valuation</span>{" "}
-            Services in Dubai &amp; Global
+            <span style={{ color: "#4BD1A0" }}>Business Exit & Valuation</span>{" "}
+            Services
           </motion.h1>
 
           <motion.p
@@ -166,7 +166,7 @@ const Index = () => (
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-white/80 text-base md:text-lg max-w-2xl leading-relaxed mb-8"
           >
-            Reliable, accurate business valuation services trusted by companies across the UAE, UK, and globally. From due diligence to financial modelling — Assetica delivers comprehensive valuations that drive confident decisions.
+            Reliable, accurate business valuation services trusted by companies across the UAE, UK, and globally. From due diligence to financial modelling, Assetica delivers comprehensive valuations that drive confident decisions.
           </motion.p>
 
           <motion.div
@@ -232,7 +232,7 @@ const Index = () => (
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#4BD1A0" }}>Business Valuation</p>
               <h3 className="text-white font-display font-bold text-xl leading-snug">
-                Independent valuations for businesses and assets — ensuring compliance and confident decisions.
+                Independent valuations for businesses and assets, ensuring compliance and confident decisions.
               </h3>
             </div>
             <div className="mt-8 flex items-center gap-2">
@@ -297,7 +297,7 @@ const Index = () => (
     {/* Feature Highlight Card */}
     <div className="max-w-7xl mx-auto px-4 md:px-8 py-16">
       <FeatureHighlightCard
-        imageSrc="https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=900&q=80"
+        imageSrc="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80"
         imageAlt="Business valuation analytics dashboard"
         title="Precision Valuation, Proven Results"
         description="Our expert team combines 30+ years of experience with cutting-edge financial modelling to deliver valuations that stand up in boardrooms, courts, and across borders. Trusted by 500+ businesses in Dubai, GCC, UK & Europe."
@@ -341,7 +341,7 @@ const Index = () => (
             Professional Business Valuation Services in Dubai
           </h2>
           <p className="text-slate-500 text-sm leading-relaxed mb-6">
-            Explore our specialized business valuation services designed to empower your financial decisions — from initial consultations to comprehensive valuations.
+            Explore our specialized business valuation services designed to empower your financial decisions, from initial consultations to comprehensive valuations.
           </p>
           <Link
             to="/services"
@@ -389,7 +389,7 @@ const Index = () => (
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#4BD1A0" }}>Get to Know Us</p>
               <h2 className="font-display font-bold text-white text-2xl md:text-3xl leading-snug mb-4">
-                Your Trusted Business Valuator in Dubai
+                Your Trusted Business Valuer
               </h2>
               <p className="text-white/65 text-sm leading-relaxed">
                 At Assetica, we excel in delivering top-tier valuation services through our unparalleled expertise, extensive experience, and client-focused approach. With over 30 years of experience at the highest level, our team provides precise valuations that reflect the true potential of your business.
@@ -426,7 +426,7 @@ const Index = () => (
     <div className="px-4 md:px-8 pb-8">
       <AnimatedSection>
         <div className="relative rounded-2xl overflow-hidden h-48 md:h-56">
-          <img src={cityDubaiImg} alt="Dubai skyline — business valuation hub" className="w-full h-full object-cover" />
+          <img src={cityDubaiImg} alt="Dubai skyline, business valuation hub" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-[#012241]/55" />
           <div className="absolute inset-0 flex items-center justify-center text-center px-6">
             <div>

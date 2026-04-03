@@ -17,7 +17,7 @@ const ContactForm = () => {
     setError("");
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://assetica-contact-worker.rsrinivasan163.workers.dev", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -66,6 +66,7 @@ const ContactForm = () => {
         <label className="block text-xs font-semibold text-slate-600 mb-1.5">Service Interested In</label>
         <select value={form.service} onChange={e => setForm({ ...form, service: e.target.value })} className={inputCls} onFocus={focus} onBlur={blur}>
           <option value="">Select a service...</option>
+          <option>Business Valuation</option>
           <option>Due Diligence</option>
           <option>Business Structuring</option>
           <option>Building Pitch Deck</option>

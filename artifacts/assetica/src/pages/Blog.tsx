@@ -58,11 +58,11 @@ export const blogPosts = [
   {
     slug: "maximize-business-potential-financial-valuations",
     title: "Maximize Your Business Potential with Precise Financial Valuations",
-    excerpt: "In the competitive business world, understanding your company's true value is crucial — whether you're seeking investment, planning a merger, or making strategic decisions.",
+    excerpt: "In the competitive business world, understanding your company's true value is crucial, whether you're seeking investment, planning a merger, or making strategic decisions.",
     date: "Jul 17, 2024", readTime: "2 min read",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
     category: "Financial Valuation",
-    content: `<h2>The Importance of Knowing Your Business's True Value</h2><p>Whether you're seeking investment, planning a merger, preparing for a sale, or making strategic growth decisions — a precise financial valuation is your foundation for confident decision-making.</p><h2>Assetica's Approach to Financial Modelling</h2><p>Our financial modelling service uses advanced analytical tools, real-time market data, and deep industry knowledge to produce valuations that are both precise and defensible. We help you understand what the numbers mean for your strategy.</p>`,
+    content: `<h2>The Importance of Knowing Your Business's True Value</h2><p>Whether you're seeking investment, planning a merger, preparing for a sale, or making strategic growth decisions, a precise financial valuation is your foundation for confident decision-making.</p><h2>Assetica's Approach to Financial Modelling</h2><p>Our financial modelling service uses advanced analytical tools, real-time market data, and deep industry knowledge to produce valuations that are both precise and defensible. We help you understand what the numbers mean for your strategy.</p>`,
   },
 ];
 
@@ -82,7 +82,7 @@ const Blog = () => (
     <Navbar />
     <div className="pt-[72px] px-4 md:px-8">
       <div className="relative rounded-3xl overflow-hidden" style={{ height: "clamp(250px, 40vh, 360px)" }}>
-        <img src={heroImg} alt="Assetica Blog — Business Valuation Insights Dubai" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+        <img src={heroImg} alt="Assetica Blog, Business Valuation Insights Dubai" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#012241]/50 via-[#012241]/60 to-[#012241]/80" />
         <div className="relative h-full flex flex-col items-center justify-center text-center px-6">
           <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#4BD1A0" }}>Blogs</p>
@@ -94,7 +94,7 @@ const Blog = () => (
     <div className="max-w-7xl mx-auto px-4 md:px-8 py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogPosts.map((post, i) => (
-          <AnimatedSection key={post.slug} delay={i * 0.06}>
+          <AnimatedSection key={post.slug} delay={i * 0.06} className="h-full">
             <Link to={`/blog/${post.slug}`} className="group block h-full">
               <div className="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-lg hover:border-[#4BD1A0]/30 transition-all duration-300 h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">

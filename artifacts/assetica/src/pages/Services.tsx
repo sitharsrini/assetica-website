@@ -11,24 +11,31 @@ const heroImg = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?au
 
 const services = [
   {
+    slug: "business-valuation",
+    title: "Business Valuation",
+    desc: "Independent, certified valuations for fundraising, exits, M&A, shareholder disputes, and regulatory compliance. Credible, defensible valuations that stand up to investor and regulatory scrutiny.",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=80",
+    badge: "Core Service",
+  },
+  {
     slug: "due-diligence",
     title: "Due Diligence",
-    desc: "Our thorough research and analysis reveal your business's strengths, weaknesses, and growth potential. We provide comprehensive due diligence reports that minimize risk and maximize investment confidence.",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80",
+    desc: "Our thorough research and analysis reveal your business's strengths, weaknesses, and growth potential. We provide comprehensive due diligence reports that minimise risk and maximise investment confidence.",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
     badge: "Risk Management",
   },
   {
     slug: "business-structuring",
     title: "Business Structuring",
     desc: "We establish a strong valuation foundation by assessing legal, financial, and operational aspects of your business. Our experts help structure your business for optimal valuation outcomes.",
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80",
     badge: "Foundation Building",
   },
   {
     slug: "building-pitch-deck",
     title: "Building Pitch Deck",
     desc: "We craft compelling presentations that highlight your company's value proposition, financials, and growth prospects. Designed to captivate investors and stakeholders.",
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=80",
     badge: "Investor Ready",
   },
   {
@@ -41,14 +48,14 @@ const services = [
   {
     slug: "buyer-seller-negotiation",
     title: "Buyer & Seller Negotiation",
-    desc: "We facilitate successful negotiations during mergers, acquisitions, or sales, ensuring favorable outcomes for all parties. Expert intermediaries protecting your interests.",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80",
+    desc: "We facilitate successful negotiations during mergers, acquisitions, or sales, ensuring favourable outcomes for all parties. Expert intermediaries protecting your interests.",
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80",
     badge: "M&A Advisory",
   },
   {
     slug: "tax-valuation",
     title: "Tax Valuation",
-    desc: "We assess tax impacts and develop optimized strategies to enhance your company's financial health. Compliant, transparent tax valuations for UAE, UK and international markets.",
+    desc: "We assess tax impacts and develop optimised strategies to enhance your company's financial health. Compliant, transparent tax valuations for UAE, UK and international markets.",
     image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=900&q=80",
     badge: "Regulatory Compliant",
   },
@@ -56,26 +63,30 @@ const services = [
     slug: "strategic-value-advisory",
     title: "Strategic Value Advisory",
     desc: "We offer insights to enhance your company's overall value and ensure long-term growth. Strategic guidance aligned with your business objectives and market opportunities.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=900&q=80",
     badge: "Growth Strategy",
   },
   {
     slug: "business-planning",
     title: "Business Planning",
     desc: "Our advanced financial models project future performance and guide strategic decision-making. Comprehensive business plans that attract investment and drive sustainable growth.",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80",
     badge: "Future-Focused",
   },
 ];
 
 const servicesFaqs = [
   {
+    q: "What is business valuation and why does my company need one?",
+    a: "Business valuation is the independent assessment of your company's economic worth. It is required in a range of situations including fundraising, business sales, acquisitions, shareholder exits, tax compliance, and dispute resolution. Assetica's independent valuations are credible, defensible, and tailored to your specific purpose.",
+  },
+  {
     q: "What is included in Assetica's due diligence service?",
-    a: "Our due diligence service includes thorough research and analysis of your business covering financial health, operational efficiency, legal compliance, market positioning, and growth potential. We provide a comprehensive report that supports informed investment decisions and minimizes risk.",
+    a: "Our due diligence service includes thorough research and analysis of your business covering financial health, operational efficiency, legal compliance, market positioning, and growth potential. We provide a comprehensive report that supports informed investment decisions and minimises risk.",
   },
   {
     q: "How does Assetica's financial modelling work?",
-    a: "Our financial modelling service uses advanced analytical tools to build precise valuation models. We analyze your financial statements, benchmark against industry peers, integrate market trends, and project future performance to determine your company's true worth.",
+    a: "Our financial modelling service uses advanced analytical tools to build precise valuation models. We analyse your financial statements, benchmark against industry peers, integrate market trends, and project future performance to determine your company's true worth.",
   },
   {
     q: "What is a pitch deck and why do I need one?",
@@ -87,7 +98,7 @@ const servicesFaqs = [
   },
   {
     q: "How does Assetica support buyer and seller negotiations?",
-    a: "Our team acts as experienced intermediaries, providing independent valuation opinions and negotiation support to both buyers and sellers. We help structure deals that are fair, transparent, and favorable, ensuring successful outcomes for all parties in mergers, acquisitions, and business sales.",
+    a: "Our team acts as experienced intermediaries, providing independent valuation opinions and negotiation support to both buyers and sellers. We help structure deals that are fair, transparent, and favourable, ensuring successful outcomes for all parties in mergers, acquisitions, and business sales.",
   },
 ];
 
@@ -111,7 +122,7 @@ const Services = () => (
             Professional Business Valuation Services in Dubai
           </h1>
           <p className="text-white/70 mt-4 text-sm md:text-base max-w-2xl leading-relaxed">
-            Explore Assetica's specialized business valuation services designed to empower your financial decisions across the UAE, UK and globally.
+            Explore Assetica's specialised business valuation services designed to empower your financial decisions across the UAE, UK and globally.
           </p>
         </div>
       </div>
@@ -127,7 +138,7 @@ const Services = () => (
           </div>
           <div>
             <p className="text-slate-800 text-xl md:text-2xl leading-relaxed font-medium max-w-3xl">
-              Discover <span style={{ color: "#4BD1A0" }} className="font-semibold">Assetica's business valuation services</span> around the world — offering independent valuations for businesses and assets to ensure compliance and confident decisions.
+              Discover <span style={{ color: "#4BD1A0" }} className="font-semibold">Assetica's business valuation services</span> around the world, offering independent valuations for businesses and assets to ensure compliance and confident decisions.
             </p>
           </div>
         </div>

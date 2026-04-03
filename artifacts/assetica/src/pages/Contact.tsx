@@ -30,7 +30,7 @@ const contactFaqs = [
 const Contact = () => (
   <>
     <SEOHead
-      title="Contact Assetica | Business Valuation Enquiries — Dubai & UK"
+      title="Contact Assetica | Business Valuation Enquiries, Dubai & UK"
       description="Get in touch with Assetica's valuation experts in Dubai & London. Free initial consultation for business valuation, M&A advisory and due diligence."
       canonical="/contact"
     />
@@ -39,7 +39,7 @@ const Contact = () => (
 
     <div className="pt-[72px] px-4 md:px-8">
       <div className="relative rounded-3xl overflow-hidden" style={{ height: "clamp(250px, 40vh, 380px)" }}>
-        <img src={heroImg} alt="Contact Assetica — Business Valuation Dubai" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+        <img src={heroImg} alt="Contact Assetica, Business Valuation Dubai" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#012241]/50 via-[#012241]/60 to-[#012241]/80" />
         <div className="relative h-full flex flex-col items-center justify-center text-center px-6">
           <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#4BD1A0" }}>Contact Us</p>

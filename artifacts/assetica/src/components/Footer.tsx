@@ -3,6 +3,15 @@ import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import logoIcon from "@/assets/logo-icon.png";
 
+const insights = [
+  { name: "Buying a Running Business", slug: "navigating-business-valuation-buying-running-business" },
+  { name: "Risk Management & Value Advisory", slug: "navigating-business-risks-strategic-value-advisory" },
+  { name: "Optimal Timing to Sell a Business", slug: "selling-a-business-optimal-timing" },
+  { name: "Mitigating Valuation Risks", slug: "mitigating-risks-business-valuation" },
+  { name: "How to Create a Pitch Deck", slug: "how-to-create-a-pitch-deck" },
+  { name: "Precise Financial Valuations", slug: "maximize-business-potential-financial-valuations" },
+];
+
 const services = [
   { name: "Due Diligence", slug: "due-diligence" },
   { name: "Business Structuring", slug: "business-structuring" },
@@ -17,7 +26,7 @@ const services = [
 const Footer = () => (
   <footer style={{ backgroundColor: "#012241", color: "#e2e8f0" }}>
     <div className="max-w-7xl mx-auto px-6 py-16">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
 
         <div>
           <div className="flex items-center gap-2 mb-5">
@@ -72,6 +81,22 @@ const Footer = () => (
                 style={{ color: "rgba(226,232,240,0.65)" }}
               >
                 {s.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-display font-semibold mb-5 text-[#4BD1A0]">Insights</h4>
+          <div className="grid grid-cols-1 gap-2.5">
+            {insights.map((item) => (
+              <Link
+                key={item.slug}
+                to={`/blog/${item.slug}`}
+                className="text-sm transition-colors hover:text-[#4BD1A0]"
+                style={{ color: "rgba(226,232,240,0.65)" }}
+              >
+                {item.name}
               </Link>
             ))}
           </div>

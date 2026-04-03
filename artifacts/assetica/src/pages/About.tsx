@@ -13,9 +13,9 @@ const officeImg = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?
 
 const reasons = [
   { icon: Target, title: "Comprehensive Valuation Solutions", desc: "Discover Assetica's business valuation services around the world, offering independent valuations for businesses and assets. Ensure compliance and make confident decisions." },
-  { icon: Users, title: "Expertise Across Industries", desc: "Our seasoned professionals bring decades of cross-industry expertise to every engagement — from SMEs to Fortune 500 companies across the UAE, UK, and globally." },
+  { icon: Users, title: "Expertise Across Industries", desc: "Our seasoned professionals bring decades of cross-industry expertise to every engagement, from SMEs to Fortune 500 companies across the UAE, UK, and globally." },
   { icon: Award, title: "Regulatory Compliance", desc: "All our valuations adhere to UAE, UK, and international regulatory standards. Our reports are accepted by banks, courts, and regulatory authorities worldwide." },
-  { icon: Lightbulb, title: "Strategic Value Advisory", desc: "We don't just value your business — we help you understand and enhance it. Our strategic insights guide long-term growth and value maximization." },
+  { icon: Lightbulb, title: "Strategic Value Advisory", desc: "We don't just value your business, we help you understand and enhance it. Our strategic insights guide long-term growth and value maximization." },
 ];
 
 const aboutFaqs = [
@@ -53,7 +53,7 @@ const About = () => (
 
     <div className="pt-[72px] px-4 md:px-8">
       <div className="relative rounded-3xl overflow-hidden" style={{ height: "clamp(280px, 45vh, 420px)" }}>
-        <img src={heroImg} alt="About Assetica — Business Valuation Dubai" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+        <img src={heroImg} alt="About Assetica, Business Valuation Dubai" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#012241]/50 via-[#012241]/60 to-[#012241]/80" />
         <div className="relative h-full flex flex-col items-center justify-center text-center px-6">
           <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#4BD1A0" }}>About Us</p>
@@ -79,7 +79,7 @@ const About = () => (
             Assetica was established to fill a critical need in the UAE and UK markets: a <span style={{ color: "#4BD1A0" }} className="font-semibold">genuinely independent, technically rigorous</span> business valuation firm that puts clients first.
           </p>
           <p className="text-slate-500 text-base leading-relaxed">
-            Starting with a focus on business valuation in Dubai, we have grown to serve clients across the UAE, UK, and 15+ countries worldwide — delivering world-class valuation services that empower better financial decisions across every industry.
+            Starting with a focus on business valuation in Dubai, we have grown to serve clients across the UAE, UK, and 15+ countries worldwide, delivering world-class valuation services that empower better financial decisions across every industry.
           </p>
         </AnimatedSection>
       </div>
@@ -87,7 +87,7 @@ const About = () => (
       <div className="grid lg:grid-cols-2 gap-6">
         <AnimatedSection direction="left">
           <div className="relative rounded-2xl overflow-hidden h-80 md:h-96">
-            <img src={teamImg} alt="Assetica team — business valuation experts" className="w-full h-full object-cover" />
+            <img src={teamImg} alt="Assetica team, business valuation experts" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#012241]/60 to-transparent" />
             <div className="absolute bottom-5 left-5">
               <span className="text-[#012241] text-xs font-bold px-3 py-1.5 rounded-full" style={{ backgroundColor: "#4BD1A0" }}>Our Expert Team</span>
@@ -103,7 +103,7 @@ const About = () => (
                 To be the most trusted business valuation partner for companies across the UAE, UK, and globally.
               </h2>
               <p className="text-white/60 text-sm leading-relaxed">
-                We provide comprehensive valuation services — from due diligence and financial modelling to pitch deck development and strategic advisory — all under one roof, all to the highest professional standards.
+                We provide comprehensive valuation services, from due diligence and financial modelling to pitch deck development and strategic advisory, all under one roof, all to the highest professional standards.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-3 mt-8">
@@ -154,7 +154,7 @@ const About = () => (
             <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#4BD1A0" }}>Trusted Globally</p>
             <h2 className="font-display font-bold text-white text-2xl md:text-3xl mb-4">Trusted by Global Businesses</h2>
             <p className="text-white/60 text-sm max-w-xl mx-auto mb-8 leading-relaxed">
-              From startups to multinational corporations — businesses across the UAE, UK, and 15+ countries rely on Assetica for precise, independent valuations that drive confident decisions.
+              From startups to multinational corporations, businesses across the UAE, UK, and 15+ countries rely on Assetica for precise, independent valuations that drive confident decisions.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-white/40 text-xs mb-8">
               {["IFRS Compliant", "UAE Standards", "UK Standards", "RICS Aligned", "ISO Certified Methodology"].map(t => (
@@ -177,7 +177,7 @@ const About = () => (
 
     <FaqSection
       faqs={aboutFaqs}
-      title="About Assetica — FAQs"
+      title="About Assetica, FAQs"
       subtitle="Common questions about who we are and how we work."
     />
 
