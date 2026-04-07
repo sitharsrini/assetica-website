@@ -1,0 +1,5 @@
+# www → non-www (308 permanent)
+https://www.assetica.net/* https://assetica.net/:splat 308
+
+# SPA fallback — must be last
+/* /index.html 200
