@@ -365,6 +365,14 @@ const staticRoutes = [
     schemas: [],
   },
   {
+    path: '/admin',
+    title: 'Admin | Assetica',
+    description: 'Assetica internal admin panel.',
+    canonical: '/admin',
+    noIndex: true,
+    schemas: [],
+  },
+  {
     path: '/golden-visa-valuation',
     title: 'Golden Visa Business Valuation UAE | GDRFA-Compliant | Assetica',
     description:
