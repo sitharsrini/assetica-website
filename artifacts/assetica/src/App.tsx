@@ -10,6 +10,8 @@ import Contact from "@/pages/Contact";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import GoldenVisaValuation from "@/pages/GoldenVisaValuation";
+import FamilyOfficeValuation from "@/pages/FamilyOfficeValuation";
 import NotFound from "@/pages/NotFound";
 import Admin from "@/pages/Admin";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -41,6 +43,8 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/golden-visa-valuation" element={<GoldenVisaValuation />} />
+          <Route path="/family-office-valuation" element={<FamilyOfficeValuation />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

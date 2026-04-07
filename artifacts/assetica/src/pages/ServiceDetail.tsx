@@ -243,7 +243,7 @@ const ServiceDetail = () => {
     <>
       <SEOHead
         title={`${svc.title} Services in Dubai & UAE | Assetica`}
-        description={svc.intro.slice(0, 155)}
+        description={svc.intro.length > 155 ? svc.intro.slice(0, 155).replace(/\s\S+$/, '') + '\u2026' : svc.intro}
         canonical={`/services/${slug}`}
         schema={[serviceSchema, faqSchema, breadcrumbSchema].filter(Boolean) as object[]}
       />

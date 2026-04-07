@@ -1,8 +1,16 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEOHead from "@/components/SEOHead";
 
 const PrivacyPolicy = () => (
+  <>
+    <SEOHead
+      title="Privacy Policy | Assetica"
+      description="Assetica's privacy policy detailing how we collect, use and protect your personal data across our business valuation services."
+      canonical="/privacy-policy"
+      noIndex={true}
+    />
   <div className="min-h-screen" style={{ backgroundColor: "#ffffff" }}>
     <Navbar />
     <div className="pt-[72px] px-4 md:px-8">
@@ -35,6 +43,7 @@ const PrivacyPolicy = () => (
     </div>
     <Footer />
   </div>
+  </>
 );
 
 export default PrivacyPolicy;
