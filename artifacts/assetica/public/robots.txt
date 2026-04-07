@@ -1,8 +1,39 @@
 User-agent: *
 Allow: /
-
 Disallow: /api/
 Disallow: /admin/
 Disallow: /*.json$
+
+# Explicitly allow Google crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Allow AI/Answer Engine crawlers for AEO visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Applebot
+Allow: /
 
 Sitemap: https://assetica.net/sitemap.xml
