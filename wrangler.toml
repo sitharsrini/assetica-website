@@ -1,5 +1,2 @@
 name = "assetica-live-website"
 pages_build_output_dir = "./artifacts/assetica/dist"
-
-[build]
-command = "pnpm --filter @workspace/assetica run build"
